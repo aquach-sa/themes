@@ -29,6 +29,9 @@ Temporary Items
 # NPM
 node_modules/
 
+# Dist folder
+dist
+
 # Theme folders config
 Themes/8.2 2016 Dark/config.json
 Themes/8.2 2016 Light/config.json

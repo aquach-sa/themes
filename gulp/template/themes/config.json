@@ -56,6 +56,7 @@
   ],
   "watch": "./Themes/{{themeName}}/**/*",
   "deploy": [],
+  "deployName": "",
   "url": "",
   "devDest": ""
 }

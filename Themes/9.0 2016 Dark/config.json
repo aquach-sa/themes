@@ -56,6 +56,7 @@
   ],
   "watch": "./Themes/9.0 2016 Dark/**/*",
   "deploy": [],
-  "url": "https://192.168.2.164/theme/",
+  "deployName": "2016 Dark",
+  "url": "",
   "devDest": ""
 }
