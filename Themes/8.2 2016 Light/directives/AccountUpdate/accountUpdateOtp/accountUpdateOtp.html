@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label class="col-sm-2">{{AccountUpdateOtp.otpTxt.label.text}}</label>
+  <div class="col-sm-10">
+    <div ng-repeat="info in AccountUpdateOtp.otpDevices">
+      <input type="{{info.input.type}}" ng-checked="{{info.input.check}}" ng-click="AccountUpdateOtp.check(info.input.id)" ng-if="info.input"> <span>{{info.label.text}}</span>
+    </div>
+    <div ng-if="AccountUpdateOtp.otpDeviceRestBtn">
+      <button ng-click="AccountUpdateOtp.resetBtn()" class="btn btn-danger" name="{{AccountUpdateOtp.otpDeviceRestBtn.button.name}}">{{AccountUpdateOtp.otpDeviceRestBtn.button.value}}</button>
+    </div>
+  </div>
+</div>

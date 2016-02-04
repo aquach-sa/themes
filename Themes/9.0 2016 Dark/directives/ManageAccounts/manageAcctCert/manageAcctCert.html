@@ -1,0 +1,26 @@
+<div class="form-group" ng-repeat="info in ManageAcctCert.certCount">
+  <label class="col-sm-2">{{info.label.text}}</label>
+  <div class="col-sm-10">
+    <input id="{{info.input.id + '_UiInput'}}" value="{{info.input.value}}" type="{{info.input.type}}" class="form-control" autocomplete="off" ng-readonly="info.input.readonly" ng-model="$index" ng-change="ManageAcctCert.onChange(info.input.id)" ng-init="$index = info.input.value">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-sm-2">{{ManageAcctCert.certDateTxt[0].label.text}}</label>
+  <div class="col-sm-10">
+    <div class="form-group row">
+      <div class="col-sm-2" ng-repeat="info in ManageAcctCert.certDate">
+        <input id="{{info.input.id + '_UiInput'}}" value="{{info.input.value}}" type="{{info.input.type}}" class="form-control" autocomplete="off" ng-if="info.input.nodename == 'input'" ng-readonly="info.input.readonly" ng-model="$index" ng-change="ManageAcctCert.onChange(info.input.id)" ng-init="$index = info.input.value">
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-10"><small><i>{{ManageAcctCert.certDateTxt[1].label.text}}</i></small></div>
+</div>
+
+<div class="form-group" ng-if="ManageAcctCert.certResetBtn">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-10">
+    <button ng-click="ManageAcctCert.resetBtn()" class="btn btn-danger" name="{{ManageAcctCert.certResetBtn.button.name}}" >{{ManageAcctCert.certResetBtn.button.value}}</button>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="col-sm-12">
+  <div class="row">
+    <h4>{{RevokeCertificate.rekoveCertTxt.legend.text}}</h4>
+  </div>
+</div>
+
+<div class="form-group" ng-repeat="cert in RevokeCertificate.rekoveCertNumber">
+  <label class="col-sm-2">{{cert.label.text}}</label>
+  <div class="col-sm-10">
+    <input id="{{cert.input.id + '_UiInput'}}" value="{{cert.input.value}}" type="{{cert.input.type}}" class="form-control" autocomplete="off" ng-readonly="cert.input.readonly" ng-model="$index" ng-change="RevokeCertificate.onChange(cert.input.id)" ng-init="$index = cert.input.value">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-sm-2">{{RevokeCertificate.rekoveCertReasonTxt.label.text}}</label>
+  <div class="col-sm-10" ng-repeat="reason in RevokeCertificate.rekoveCertReason">
+    <select id="{{reason.select.id + '_UiInput'}}" name="{{reason.select.id}}" class="form-control" ng-blur="RevokeCertificate.onChange(reason.select.id)">
+      <option value="{{opt.option.value}}" ng-repeat="opt in RevokeCertificate.rekoveCertReason[$index].options" ng-selected="{{opt.option.selected}}">{{opt.option.text}}</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group" ng-if="RevokeCertificate.revokeCertButton.button.value.length > 0">
+  <div class="col-sm-12">
+    <button class="btn btn-primary" name="{{RevokeCertificate.revokeCertButton.button.name}}" ng-disabled="RevokeCertificate.rekoveCertNumber[0].input.value.length === 0">{{RevokeCertificate.revokeCertButton.button.value}}</button>
+  </div>
+</div>

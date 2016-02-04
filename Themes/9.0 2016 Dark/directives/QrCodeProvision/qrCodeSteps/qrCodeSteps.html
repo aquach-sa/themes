@@ -1,0 +1,39 @@
+<div class="form-group" vertilize-container>
+
+  <div class="col-sm-4 text-center">
+    <div vertilize>
+      <h3>{{QrCodeSteps.qrStepOneTitle.label.text}}</h3>
+      <p>{{QrCodeSteps.qrStepOneText.label.text}}</p>
+    </div>
+    <div>
+      <a href=""><i class="qrcode__apple"></i></a>
+      <a href=""><i class="qrcode__google"></i></a>
+    </div>
+  </div>
+
+  <div class="col-sm-4 text-center">
+    <div vertilize>
+      <h3>{{QrCodeSteps.qrStepTwoTitle.label.text}}</h3>
+      <p>{{QrCodeSteps.qrStepTwoText.label.text}}</p>
+    </div>
+    <div>
+      <img class="qrcode__img img-responsive" ng-src="{{QrCodeSteps.qrStepImage.image.src}}">
+    </div>
+  </div>
+
+  <div class="col-sm-4 text-center">
+    <div vertilize>
+      <h3>{{QrCodeSteps.qrStepThreeTitle.label.text}}</h3>
+      <p>{{QrCodeSteps.qrStepThreeText.label.text}}</p>
+    </div>
+    <div class="form-inline">
+      <div class="form-group">
+        <input id="{{QrCodeSteps.qrStepVerifyInput.input.id + '_UiInput'}}" type="{{QrCodeSteps.qrStepVerifyInput.input.type}}" value="{{QrCodeSteps.qrStepVerifyInput.input.value}}" class="form-control" ng-model="QrCodeSteps.verify" ng-change="QrCodeSteps.onChange(QrCodeSteps.qrStepVerifyInput.input.id)" ng-init="QrCodeSteps.verify = QrCodeSteps.qrStepVerifyInput.input.value">
+        <a href="#" class="btn btn-info" name="{{QrCodeSteps.qrStepVerifyButton.input.name}}" ng-click="QrCodeSteps.onClick(QrCodeSteps.qrStepVerifyButton.input.id)">{{QrCodeSteps.qrStepVerifyButton.input.value}}</a>
+        <p class="text-danger" ng-if="QrCodeSteps.qrStepVerifyError.label.text.length > 0">{{QrCodeSteps.qrStepVerifyError.label.text}}</p>
+      </div>
+    </div>
+    
+  </div>
+
+</div>

@@ -1,0 +1,61 @@
+{
+  "autoprefixer": {
+    "browsers": [
+      "last 2 versions",
+      "safari 5",
+      "ie 9",
+      "opera 12.1",
+      "ios 6",
+      "android 4"
+    ],
+    "cascade": true
+  },
+  "app": "./Themes/9.0 2016 Dark/app.js",
+  "css": "./Themes/9.0 2016 Dark/app.scss",
+  "bower": [
+    "./bower_components/jquery/dist/jquery.js",
+    "./bower_components/angular/angular.js",
+    "./bower_components/angular-ui-router/release/angular-ui-router.js",
+    "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
+    "./bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+    "./bower_components/ng-focus-if/focusIf.min.js",
+    "./bower_components/angular-vertilize/angular-vertilize.min.js"
+  ],
+  "ng": [
+    "./Themes/9.0 2016 Dark/app.js",
+    "./Themes/9.0 2016 Dark/directives/**/*.js",
+    "./Themes/9.0 2016 Dark/services/**/*.js",
+    "./Themes/9.0 2016 Dark/views/**/*.js"
+  ],
+  "js": [
+    "./Themes/9.0 2016 Dark/bower.js",
+    "./Themes/9.0 2016 Dark/ng.js"
+  ],
+  "copy": [
+    "./Themes/9.0 2016 Dark/**/*.html",
+    "./Themes/9.0 2016 Dark/app.min.js",
+    "./Themes/9.0 2016 Dark/theme.js",
+    "./Themes/9.0 2016 Dark/MFAStyleSheet.css",
+    "./Themes/9.0 2016 Dark/*.Master",
+    "./Themes/9.0 2016 Dark/*.vb",
+    "!./Themes/9.0 2016 Dark/app.js",
+    "!./Themes/9.0 2016 Dark/app.scss",
+    "!./Themes/9.0 2016 Dark/config.json"
+  ],
+  "build": [
+    "./Themes/9.0 2016 Dark/app.min.js",
+    "./Themes/9.0 2016 Dark/MFAStyleSheet.css"
+  ],
+  "dest": "./dist/2016 Dark",
+  "source": "./Themes/9.0 2016 Dark",
+  "pristine": [
+    "./Themes/9.0 2016 Dark/app.min.js",
+    "./Themes/9.0 2016 Dark/bower.js",
+    "./Themes/9.0 2016 Dark/ng.js",
+    "./Themes/9.0 2016 Dark/MFAStyleSheet.css"
+  ],
+  "watch": "./Themes/9.0 2016 Dark/**/*",
+  "deploy": [],
+  "url": "https://192.168.2.164/theme/",
+  "devDest": ""
+}

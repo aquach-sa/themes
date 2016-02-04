@@ -1,0 +1,6 @@
+<div class="form-group" ng-if="PublicPrivateMode.modes.length > 0">
+  <div class="col-sm-12" ng-repeat="mode in PublicPrivateMode.modes">
+    <input id="{{mode.input.id + '_UiInput'}}" type="{{mode.input.type}}" name="{{mode.input.name + '_UiName'}}" ng-checked="{{mode.input.check}}" ng-click="PublicPrivateMode.selectMode(mode.input.id)"> 
+    <label class="text--color" for="{{mode.input.id + '_UiInput'}}">{{mode.label.text}}</label>
+  </div>
+</div>

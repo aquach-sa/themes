@@ -1,0 +1,6 @@
+<div class="form-group" ng-repeat="qa in KbaQuestionAnswer.kbaQuestionAnswer">
+  <label class="col-sm-12" ng-if="qa.label.text.length > 0">{{qa.label.text}}</label>
+  <div class="col-sm-12" ng-if="qa.input.id.length > 0">
+    <input id="{{qa.input.id + '_UiInput'}}" class="form-control" type="{{qa.input.type}}" value="{{qa.input.value}}" ng-model="$index" ng-change="KbaQuestionAnswer.qaOnChange(qa.input.id)" ng-init="$index = qa.input.value" focus-if="$first" required>
+  </div>
+</div>

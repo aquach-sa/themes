@@ -1,0 +1,66 @@
+{
+  "autoprefixer": {
+    "browsers": [
+      "last 2 versions",
+      "safari 5",
+      "ie 9",
+      "opera 12.1",
+      "ios 6",
+      "android 4"
+    ],
+    "cascade": true
+  },
+  "app": "./Themes/8.2 2016 Light/app.js",
+  "css": "./Themes/8.2 2016 Light/app.scss",
+  "bower": [
+    "./bower_components/jquery/dist/jquery.js",
+    "./bower_components/angular/angular.js",
+    "./bower_components/angular-ui-router/release/angular-ui-router.js",
+    "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
+    "./bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+    "./bower_components/ng-focus-if/focusIf.min.js",
+    "./bower_components/angular-vertilize/angular-vertilize.min.js"
+  ],
+  "ng": [
+    "./Themes/8.2 2016 Light/app.js",
+    "./Themes/8.2 2016 Light/directives/**/*.js",
+    "./Themes/8.2 2016 Light/services/**/*.js",
+    "./Themes/8.2 2016 Light/views/**/*.js"
+  ],
+  "js": [
+    "./Themes/8.2 2016 Light/bower.js",
+    "./Themes/8.2 2016 Light/ng.js"
+  ],
+  "copy": [
+    "./Themes/8.2 2016 Light/**/*.html",
+    "./Themes/8.2 2016 Light/app.min.js",
+    "./Themes/8.2 2016 Light/theme.js",
+    "./Themes/8.2 2016 Light/MFAStyleSheet.css",
+    "./Themes/8.2 2016 Light/*.Master",
+    "./Themes/8.2 2016 Light/*.vb",
+    "!./Themes/8.2 2016 Light/app.js",
+    "!./Themes/8.2 2016 Light/app.scss",
+    "!./Themes/8.2 2016 Light/config.json"
+  ],
+  "build": [
+    "./Themes/8.2 2016 Light/app.min.js",
+    "./Themes/8.2 2016 Light/MFAStyleSheet.css"
+  ],
+  "dest": "./dist/2016 Light",
+  "source": "./Themes/8.2 2016 Light",
+  "pristine": [
+    "./Themes/8.2 2016 Light/app.min.js",
+    "./Themes/8.2 2016 Light/bower.js",
+    "./Themes/8.2 2016 Light/ng.js",
+    "./Themes/8.2 2016 Light/MFAStyleSheet.css"
+  ],
+  "watch": "./Themes/8.2 2016 Light/**/*",
+  "deploy": [
+    "New Location",
+    "Clear Recent Location",
+    "/Volumes/C/dev/Development/kphan/8.2-hotfix/Src/MFC.WebApp.SecureAuth/Themes",
+    "/Users/kphan/Sites/secureauth/8.2-hotfix/Src/MFC.WebApp.SecureAuth/Themes"
+  ],
+  "url": "",
+  "devDest": ""
+}

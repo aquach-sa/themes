@@ -1,0 +1,45 @@
+<div class="form-group" ng-if="ManageAcctSymantec.symantecHeader.label.text.length > 0">
+  <label class="col-sm-2">{{ManageAcctSymantec.symantecHeader.label.text}}</label>
+  <div class="col-sm-10">
+    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th ng-repeat="symantec in ManageAcctSymantec.symantecTableTh">{{symantec.label.text}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="vip in ManageAcctSymantec.symantecTableEntry">
+          <td>
+            <a href="{{vip.link.del.href}}" >{{vip.link.del.text}}</a>
+            <a href="{{vip.link.edit.href}}">{{vip.link.edit.text}}</a>
+          </td>
+          <td>
+            {{vip.cred.text}}
+          </td>
+          <td>
+            <span ng-if="vip.name.node === 'span'">{{vip.name.text}}</span>
+            <input id="{{vip.name.id + '_UiInput'}}" class="form-control" ng-model="ManageAcctSymantec.name" ng-if="vip.name.node === 'input'" ng-change="ManageAcctSymantec.onChange(vip.name.id)">
+          </td>
+        </tr>
+        <tr>
+          <td><a href="{{ManageAcctSymantec.symantecTableLink.link.href}}">{{ManageAcctSymantec.symantecTableLink.link.text}}</td>
+          <td>
+            <input id="{{ManageAcctSymantec.symantecTableCred.input.id + '_UiInput'}}" type="{{ManageAcctSymantec.symantecTableCred.input.type}}" class="form-control" ng-model="ManageAcctSymantec.symantecTableCred.cred" ng-change="ManageAcctSymantec.onChange(ManageAcctSymantec.symantecTableCred.input.id)">
+          </td>
+          <td>
+            <input id="{{ManageAcctSymantec.symantecTableName.input.id + '_UiInput'}}" type="{{ManageAcctSymantec.symantecTableName.input.type}}" class="form-control" ng-model="ManageAcctSymantec.symantecTableName.name" ng-change="ManageAcctSymantec.onChange(ManageAcctSymantec.symantecTableName.input.id)">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="form-group" ng-if="ManageAcctSymantec.symantecButton.button.value.length > 0">
+  <label class="col-sm-2"></label>
+  <div class="col-sm-10">
+    <button class="btn btn-danger" name="{{ManageAcctSymantec.symantecButton.button.name}}" ng-click="ManageAcctCert.symantecVip()">{{ManageAcctSymantec.symantecButton.button.value}}</button>
+  </div>
+</div>

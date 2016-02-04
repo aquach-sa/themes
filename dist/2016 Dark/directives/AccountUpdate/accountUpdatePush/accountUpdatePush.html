@@ -1,0 +1,8 @@
+<div class="form-group">
+  <label class="col-sm-2">{{AccountUpdatePush.pushTxt.label.text}}</label>
+  <div class="col-sm-10" >
+    <div ng-repeat="info in AccountUpdatePush.pushDevices">
+      <input type="{{info.input.type}}" ng-checked="{{info.input.check}}" ng-click="AccountUpdatePush.check(info.input.id)" ng-if="info.input"> <span>{{info.label.text}}</span>
+    </div>
+  </div>
+</div>
