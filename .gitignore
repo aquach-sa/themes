@@ -1,0 +1,40 @@
+# Ignore Dot Files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+!.gitignore
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# NPM
+node_modules/
+
+# Build Files
+gulp/tasks/theme.develop.js
+gulp/tasks/theme.sync.js
+
+# Theme Folders
+dist/2016 Dark/
+dist/2016 Light/
+Themes/2016 Dark/
+Themes/2016 Light/

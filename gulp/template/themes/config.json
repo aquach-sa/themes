@@ -1,0 +1,61 @@
+{
+  "autoprefixer": {
+    "browsers": [
+      "last 2 versions",
+      "safari 5",
+      "ie 9",
+      "opera 12.1",
+      "ios 6",
+      "android 4"
+    ],
+    "cascade": true
+  },
+  "app": "./Themes/{{themeName}}/app.js",
+  "css": "./Themes/{{themeName}}/app.scss",
+  "bower": [
+    "./bower_components/jquery/dist/jquery.js",
+    "./bower_components/angular/angular.js",
+    "./bower_components/angular-ui-router/release/angular-ui-router.js",
+    "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
+    "./bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+    "./bower_components/ng-focus-if/focusIf.min.js",
+    "./bower_components/angular-vertilize/angular-vertilize.min.js"
+  ],
+  "ng": [
+    "./Themes/{{themeName}}/app.js",
+    "./Themes/{{themeName}}/directives/**/*.js",
+    "./Themes/{{themeName}}/services/**/*.js",
+    "./Themes/{{themeName}}/views/**/*.js"
+  ],
+  "js": [
+    "./Themes/{{themeName}}/bower.js",
+    "./Themes/{{themeName}}/ng.js"
+  ],
+  "copy": [
+    "./Themes/{{themeName}}/**/*.html",
+    "./Themes/{{themeName}}/app.min.js",
+    "./Themes/{{themeName}}/theme.js",
+    "./Themes/{{themeName}}/MFAStyleSheet.css",
+    "./Themes/{{themeName}}/*.Master",
+    "./Themes/{{themeName}}/*.vb",
+    "!./Themes/{{themeName}}/app.js",
+    "!./Themes/{{themeName}}/app.scss",
+    "!./Themes/{{themeName}}/config.json"
+  ],
+  "build": [
+    "./Themes/{{themeName}}/app.min.js",
+    "./Themes/{{themeName}}/MFAStyleSheet.css"
+  ],
+  "dest": "./dist/{{themeName}}",
+  "source": "./Themes/{{themeName}}",
+  "pristine": [
+    "./Themes/{{themeName}}/app.min.js",
+    "./Themes/{{themeName}}/bower.js",
+    "./Themes/{{themeName}}/ng.js",
+    "./Themes/{{themeName}}/MFAStyleSheet.css"
+  ],
+  "watch": "./Themes/{{themeName}}/**/*",
+  "deploy": [],
+  "url": "",
+  "devDest": ""
+}

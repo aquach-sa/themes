@@ -1,0 +1,15 @@
+<div class="form-group" ng-repeat="pin in PinCode.pinCodes">
+  <label class="col-sm-12">{{pin.label.text}}</label>
+  <div class="col-sm-12">
+    <input id="{{pin.input.id + '_UiInput'}}" class="form-control" type="{{pin.input.type}}" placeholder="{{pin.input.placeholder}}" ng-model="PinCode.number" ng-change="PinCode.pinOnChange(pin.input.id)" ng-init="PinCode.pinNumber()" focus-if required>
+  </div>
+</div>
+<div class="form-group" ng-if="PinCode.showKeyPad">
+  <div class="btn--keypad">
+    <div class="col-xs-12">
+      <span class="btn btn-primary btn--key" ng-repeat="key in PinCode.keyPad" ng-click="PinCode.keyPress(key)">{{key}}</span>
+      <span class="btn btn-primary btn--key pull-right" ng-click="PinCode.keyPress('clear')">C</span>
+      <span class="btn btn-primary btn--key pull-right" ng-click="PinCode.keyPress(0)">0</span>
+    </div>
+  </div>
+</div>
