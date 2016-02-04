@@ -15,6 +15,7 @@ var vinylPaths  = require('vinyl-paths');
 var del         = require('del');
 var inject      = require('gulp-inject-string');
 var error       = require('../util/handleErrors');
+var time        = require('../util/getTime');
 var dirname     = gulpSlash(__dirname);
 var path        = dirname.split('gulp/tasks')[0];
 var themes      = [];
@@ -26,6 +27,8 @@ var directive;
 var service;
 var template;
 var viewName;
+var configFile;
+var config;
 
 fs.readdirSync('./Themes').filter(function (folder) {
   if (fs.lstatSync('./Themes/' + folder).isDirectory()) {
@@ -67,6 +70,14 @@ gulp.task('theme:create:view', false, function () {
       choices: themes
     }, function (res) {
       theme = path + 'Themes/' + res.theme;
+      configFile = '../../Themes/' + res.theme + '/config.json';
+      try {
+        config = require(configFile.toLowerCase());
+      } catch(e) {
+        error('[' + time.getTime() +'] Theme config.json does not exist');
+        console.log('[' + time.getTime() +'] ' + chalk.red('Please verify that the theme folder you specify has the correct config.json'));
+        process.exit(1);
+      }
       if (!isThere(theme)) {
         error('[00:00:00] Theme does not exist');
         console.log('[00:00:00] ' + chalk.red('Please verify that the theme folder you specify is correct'));
@@ -104,11 +115,11 @@ gulp.task('theme:create:view', false, function () {
 });
 
 gulp.task('theme:create:view:scss', false, function () {
-  console.log(theme + '/app.scss');
-  return gulp.src(theme + '/app.scss')
+  return gulp.src(config.css)
     .pipe(vinylPaths(del))
     .pipe(inject.before('// ng-state', '[ng-state="' + viewName + '"]\n'))
     .pipe(gulp.dest(theme))
+    .on('error', error);
 });
 
 gulp.task('theme:create:directive', false, function () {
