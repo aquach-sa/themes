@@ -9,7 +9,6 @@ angular.module('secureauth')
       angular.extend(vm, {
         userNewPass: passwordView.getUserNewPass(),
         userPassConfirm: passwordView.getUserConfirm(),
-        // validatorMsg: passwordView.getValidatorMsg()[0],
         passOnChange: function (id) {
           var infoVal = angular.element('#' + id + '_UiInput').val();
           angular.element('#' + id).val(infoVal);

@@ -59,4 +59,3 @@ All JS files are written base on Angular MVC methodology
 2. services - utilities that parse the DOM to generate the HTML for Angular templating
 
 3. views - state view and overall layout
-
