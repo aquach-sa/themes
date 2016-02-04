@@ -37,7 +37,6 @@
     "./Themes/Light/theme.js",
     "./Themes/Light/MFAStyleSheet.css",
     "./Themes/Light/*.Master",
-    "./Themes/Light/*.vb",
     "!./Themes/Light/app.js",
     "!./Themes/Light/app.scss",
     "!./Themes/Light/config.json"
@@ -56,6 +55,7 @@
   ],
   "watch": "./Themes/Light/**/*",
   "deploy": [],
+  "deployName": "",
   "url": "",
   "devDest": ""
 }

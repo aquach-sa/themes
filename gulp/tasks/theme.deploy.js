@@ -181,10 +181,13 @@ gulp.task('theme:build:deploy:pristine', false, function () {
 });
 
 gulp.task('theme:deploy', false, function () {
+  if (config.deployName.length > 0) {
+    file = config.deployName;
+  }
   return gulp.src('')
     .pipe(gulpFn(function() {
       try {
-        copyDir.sync('./dist/' + file, deployPath + '/' + file);
+        copyDir.sync(config.dest, deployPath + '/' + file);
       } catch(err) {
         error('[' + time.getTime() + '] Permission denied');
         console.log('[' + time.getTime() + '] ' + chalk.red('Please verify that you have the correct folder permission set'));

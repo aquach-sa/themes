@@ -37,7 +37,6 @@
     "./Themes/Dark/theme.js",
     "./Themes/Dark/MFAStyleSheet.css",
     "./Themes/Dark/*.Master",
-    "./Themes/Dark/*.vb",
     "!./Themes/Dark/app.js",
     "!./Themes/Dark/app.scss",
     "!./Themes/Dark/config.json"
@@ -56,6 +55,7 @@
   ],
   "watch": "./Themes/Dark/**/*",
   "deploy": [],
+  "deployName": "",
   "url": "",
   "devDest": ""
 }

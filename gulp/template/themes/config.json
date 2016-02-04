@@ -37,7 +37,6 @@
     "./Themes/{{themeName}}/theme.js",
     "./Themes/{{themeName}}/MFAStyleSheet.css",
     "./Themes/{{themeName}}/*.Master",
-    "./Themes/{{themeName}}/*.vb",
     "!./Themes/{{themeName}}/app.js",
     "!./Themes/{{themeName}}/app.scss",
     "!./Themes/{{themeName}}/config.json"
@@ -56,6 +55,7 @@
   ],
   "watch": "./Themes/{{themeName}}/**/*",
   "deploy": [],
+  "deployName": "",
   "url": "",
   "devDest": ""
 }
