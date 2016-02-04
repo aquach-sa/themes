@@ -30,4 +30,7 @@ Temporary Items
 node_modules/
 
 # Theme folders config
-Themes/*/*.json
+Themes/8.2 2016 Dark/config.json
+Themes/8.2 2016 Light/config.json
+Themes/9.0 2016 Dark/config.json
+Themes/9.0 2016 Light/config.json
