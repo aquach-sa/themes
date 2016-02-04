@@ -30,4 +30,4 @@ Temporary Items
 node_modules/
 
 # Theme folders config
-Themes/**/config.json
+Themes/*/*.json
