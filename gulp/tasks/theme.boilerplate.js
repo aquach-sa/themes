@@ -107,8 +107,9 @@ gulp.task('theme:create:view:scss', false, function () {
   console.log(theme + '/app.scss');
   return gulp.src(theme + '/app.scss')
     .pipe(vinylPaths(del))
-    .pipe(inject.before('// ng-state', '[ng-state="' + viewName + '"]\n'))
+    .pipe(inject.before('// ng-state', '[ng-state="' + viewName + '"],\n'))
     .pipe(gulp.dest(theme))
+    .on('error', error);
 });
 
 gulp.task('theme:create:directive', false, function () {
