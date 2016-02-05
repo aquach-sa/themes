@@ -1,6 +1,0 @@
-<div class="form-group" ng-repeat="date in ReportDateRange.dateRange">
-  <label class="col-sm-2">{{date.label.text}}</label>
-  <div class="col-sm-10">
-    <input id="{{date.input.id + '_UiInput'}}" value="{{date.input.value}}" type="{{date.input.type}}" class="form-control datepicker" autocomplete="off" ng-model="$index" ng-change="ReportDateRange.onChange(date.input.id)" ng-init="$index = date.input.value; ReportDateRange.datePicker()">
-  </div>
-</div>

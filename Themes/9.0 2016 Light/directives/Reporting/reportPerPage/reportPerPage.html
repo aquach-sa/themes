@@ -1,8 +1,0 @@
-<div class="form-group">
-  <label class="col-sm-2">{{ReportPerPage.perPageTxt.label.text}}</label>
-  <div class="col-sm-10" ng-repeat="item in ReportPerPage.perPage">
-    <select id="{{item.select.id + '_UiInput'}}" name="{{item.select.id}}" class="form-control" ng-blur="ReportPerPage.onChange(item.select.id)">
-      <option value="{{opt.option.value}}" ng-repeat="opt in ReportPerPage.perPage[$index].options" ng-selected="{{opt.option.selected}}">{{opt.option.text}}</option>
-    </select>
-  </div>
-</div>
