@@ -117,7 +117,7 @@ gulp.task('theme:create:view', false, function () {
 gulp.task('theme:create:view:scss', false, function () {
   return gulp.src(config.css)
     .pipe(vinylPaths(del))
-    .pipe(inject.before('// ng-state', '[ng-state="' + viewName + '"]\n'))
+    .pipe(inject.before('// ng-state', '[ng-state="' + viewName + '"],\n'))
     .pipe(gulp.dest(theme))
     .on('error', error);
 });
