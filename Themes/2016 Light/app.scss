@@ -29,6 +29,7 @@ $color-panel:                #F6F7F8;
 [ng-state="PasswordView"],
 [ng-state="pinotp"],
 [ng-state="PINRegistrationView"],
+// [ng-state="qrcodeprovision"],
 [ng-state="RegistrationMethodView"],
 [ng-state="reporting"],
 [ng-state="resetaccount"],
@@ -849,4 +850,37 @@ h3.status__title {
 
 .link--social-text {
   margin-right: 5px;
+}
+
+.qrcode {
+  h2, h3 {
+    color: $color-gray;
+    font-weight: 300;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
+.qrcode__apple,
+.qrcode__google {
+  display: block;
+  height: 41px;
+  margin: 0 auto;
+  position: relative;
+  width: 135px;
+}
+
+.qrcode__apple {
+  background: url('../../Images/apple-app-badge.png') no-repeat 0 0;
+  margin-bottom: 5px;
+}
+
+.qrcode__google {
+  background: url('../../Images/google-app-badge.png') no-repeat 0 0;
+}
+
+.qrcode__img {
+  min-height: 171px;
+  margin: 0 auto;
+  min-width: 171px;
 }
