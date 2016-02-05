@@ -10,8 +10,8 @@
     ],
     "cascade": true
   },
-  "app": "./Themes/8.2 2016 Dark/app.js",
-  "css": "./Themes/8.2 2016 Dark/app.scss",
+  "app": "./Themes/2016 Dark/app.js",
+  "css": "./Themes/2016 Dark/app.scss",
   "bower": [
     "./bower_components/jquery/dist/jquery.js",
     "./bower_components/angular/angular.js",
@@ -22,45 +22,41 @@
     "./bower_components/angular-vertilize/angular-vertilize.min.js"
   ],
   "ng": [
-    "./Themes/8.2 2016 Dark/app.js",
-    "./Themes/8.2 2016 Dark/directives/**/*.js",
-    "./Themes/8.2 2016 Dark/services/**/*.js",
-    "./Themes/8.2 2016 Dark/views/**/*.js"
+    "./Themes/2016 Dark/app.js",
+    "./Themes/2016 Dark/directives/**/*.js",
+    "./Themes/2016 Dark/services/**/*.js",
+    "./Themes/2016 Dark/views/**/*.js"
   ],
   "js": [
-    "./Themes/8.2 2016 Dark/bower.js",
-    "./Themes/8.2 2016 Dark/ng.js"
+    "./Themes/2016 Dark/bower.js",
+    "./Themes/2016 Dark/ng.js"
   ],
   "copy": [
-    "./Themes/8.2 2016 Dark/**/*.html",
-    "./Themes/8.2 2016 Dark/app.min.js",
-    "./Themes/8.2 2016 Dark/theme.js",
-    "./Themes/8.2 2016 Dark/MFAStyleSheet.css",
-    "./Themes/8.2 2016 Dark/*.Master",
-    "./Themes/8.2 2016 Dark/*.vb",
-    "!./Themes/8.2 2016 Dark/app.js",
-    "!./Themes/8.2 2016 Dark/app.scss",
-    "!./Themes/8.2 2016 Dark/config.json"
+    "./Themes/2016 Dark/**/*.html",
+    "./Themes/2016 Dark/app.min.js",
+    "./Themes/2016 Dark/theme.js",
+    "./Themes/2016 Dark/MFAStyleSheet.css",
+    "./Themes/2016 Dark/*.Master",
+    "./Themes/2016 Dark/*.vb",
+    "!./Themes/2016 Dark/app.js",
+    "!./Themes/2016 Dark/app.scss",
+    "!./Themes/2016 Dark/config.json"
   ],
   "build": [
-    "./Themes/8.2 2016 Dark/app.min.js",
-    "./Themes/8.2 2016 Dark/MFAStyleSheet.css"
+    "./Themes/2016 Dark/app.min.js",
+    "./Themes/2016 Dark/MFAStyleSheet.css"
   ],
   "dest": "./dist/2016 Dark",
-  "source": "./Themes/8.2 2016 Dark",
+  "source": "./Themes/2016 Dark",
   "pristine": [
-    "./Themes/8.2 2016 Dark/app.min.js",
-    "./Themes/8.2 2016 Dark/bower.js",
-    "./Themes/8.2 2016 Dark/ng.js",
-    "./Themes/8.2 2016 Dark/MFAStyleSheet.css"
+    "./Themes/2016 Dark/app.min.js",
+    "./Themes/2016 Dark/bower.js",
+    "./Themes/2016 Dark/ng.js",
+    "./Themes/2016 Dark/MFAStyleSheet.css"
   ],
-  "watch": "./Themes/8.2 2016 Dark/**/*",
-  "deploy": [
-    "New Location",
-    "Clear Recent Location",
-    "/Volumes/C/dev/Development/kphan/8.2-hotfix/Src/MFC.WebApp.SecureAuth/Themes"
-  ],
-  "deployName": "2016 Dark",
+  "watch": "./Themes/2016 Dark/**/*",
+  "deploy": [],
+  "deployName": "",
   "url": "",
   "devDest": ""
 }
