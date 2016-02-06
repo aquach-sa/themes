@@ -18,9 +18,6 @@ angular.module('secureauth')
         qrStepVerifyButton: qrCodeProvision.getQrStepVerifyButton()[0],
         qrStepVerifyError: qrCodeProvision.getQrStepVerifyError()[0],
         qrThirdParty: qrCodeProvision.getQrThirdParty()[0],
-        qrSuccessMessage: qrCodeProvision.getQrSuccessMessage()[0],
-        qrSuccessDevice: qrCodeProvision.getQrSuccessDevice()[0],
-        qrRegDevice: qrCodeProvision.getQrRegDevice()[0],
         onChange: function (id) {
           var verify = angular.element('#' + id + '_UiInput').val();
           angular.element('#' + id).val(verify);

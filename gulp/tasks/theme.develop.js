@@ -19,7 +19,6 @@ var gulpSlash     = require('gulp-slash');
 var json          = require('json-file');
 var jsonfile      = require('jsonfile');
 var chmod         = require('gulp-chmod');
-var isThere       = require('is-there');
 var error         = require('../util/handleErrors');
 var time          = require('../util/getTime');
 var dirname       = gulpSlash(__dirname);
@@ -72,6 +71,7 @@ gulp.task('theme:develop', 'Develop a specific theme.',  function() {
         runSequence('theme:develop:dev');
       } else {
         devUrl = config.url;
+        devDest = config.devDest;
         runSequence(
         'theme:develop:clean',
         'theme:develop:css',
@@ -119,24 +119,19 @@ gulp.task('theme:develop:dev', false,  function () {
       name: 'devDest',
       message: 'Where is your appliance Themes folder?',
     }, function (res) {
-      devDest = gulpSlash(res.devDest);
-      if (isThere(devDest)) {
-        configJson = json.read(path + 'Themes/' + file + '/config.json');
-        configJson.set('devDest', devDest + '/' + file);
-        jsonfile.writeFileSync(path + 'Themes/' + file + '/config.json', configJson.data, {spaces: 2});
-        runSequence(
-        'theme:develop:clean',
-        'theme:develop:css',
-        ['theme:develop:bower',
-        'theme:develop:ng'],
-        'theme:develop:js',
-        'theme:develop:copy',
-        'theme:develop:pristine',
-        'theme:develop:serve');
-      } else {
-        error('[00:00:00] Themes folder does not exist');
-        console.log('[00:00:00] ' + chalk.red('Please verify that the folder location is correct'));
-      }
+      devDest = gulpSlash(res.devDest + '/' + file);
+      configJson = json.read(path + 'Themes/' + file + '/config.json');
+      configJson.set('devDest', devDest);
+      jsonfile.writeFileSync(path + 'Themes/' + file + '/config.json', configJson.data, {spaces: 2});
+      runSequence(
+      'theme:develop:clean',
+      'theme:develop:css',
+      ['theme:develop:bower',
+      'theme:develop:ng'],
+      'theme:develop:js',
+      'theme:develop:copy',
+      'theme:develop:pristine',
+      'theme:develop:serve');
     }));
 });
 
@@ -185,7 +180,7 @@ gulp.task('theme:develop:js', false, function () {
 gulp.task('theme:develop:copy', false, function() {
   return gulp.src(config.copy)
     .pipe(chmod(666))
-    .pipe(gulp.dest(config.devDest))
+    .pipe(gulp.dest(devDest))
     .on('error', error);
 });
 
