@@ -64,4 +64,19 @@ angular.module('secureauth')
       return domModel.getLabelInputData(label, input);
     };
 
+    this.getQrSuccessMessage = function () {
+      var label = angular.element('#ContentPlaceHolder1_SuccessLabel');
+      return domModel.getLabelData(label);
+    };
+
+    this.getQrSuccessDevice = function () {
+      var label = angular.element('#ContentPlaceHolder1_DeviceNameLabel');
+      return domModel.getLabelData(label);
+    };
+
+    this.getQrRegDevice = function () {
+      var input = angular.element('#ContentPlaceHolder1_registerButton');
+      return domModel.getInputData(input);
+    };
+
   });

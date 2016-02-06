@@ -1,4 +1,4 @@
-<div class="form-group" vertilize-container>
+<div class="form-group" vertilize-container ng-if="QrCodeSteps.qrSuccessMessage === undefined">
 
   <div class="col-sm-4 text-center">
     <div vertilize>
@@ -12,6 +12,7 @@
   </div>
 
   <div class="col-sm-4 text-center">
+  
     <div vertilize>
       <h3>{{QrCodeSteps.qrStepTwoTitle.label.text}}</h3>
       <p>{{QrCodeSteps.qrStepTwoText.label.text}}</p>
@@ -19,16 +20,18 @@
     <div class="form-group">
       <img class="qrcode__img img-responsive" ng-src="{{QrCodeSteps.qrStepImage.image.src}}">
     </div>
-    <div class="form-group">
+
+    <div class="form-group" ng-if="QrCodeSteps.qrSuccessMessage.label.text.length > 0">
       <div class="col-sm-12">
         <p>
-          <input id="{{QrCodeSteps.qrThirdParty.input.id + '_UiInput'}}" class="form-control" type="{{ QrCodeSteps.qrThirdParty.input.type}}" value="{{ QrCodeSteps.qrThirdParty.input.value}}" readonly>
+          <input id="{{QrCodeSteps.qrThirdParty.input.id + '_UiInput'}}" class="form-control text-center" type="{{ QrCodeSteps.qrThirdParty.input.type}}" value="{{ QrCodeSteps.qrThirdParty.input.value}}" readonly>
         </p>
       </div>
       <div class="col-sm-12">
         <p>{{QrCodeSteps.qrThirdParty.label.text}}</p>
       </div>
     </div>
+
   </div>
 
   <div class="col-sm-4 text-center">
@@ -45,7 +48,16 @@
         </div>
       </div>
     </div>
-    
   </div>
 
+</div>
+
+<div class="form-group text-center" ng-if="QrCodeSteps.qrSuccessMessage.label.text.length > 0">
+  <div class="col-sm-12">
+    <p>{{QrCodeSteps.qrSuccessMessage.label.text}}</p>
+    <p><label>{{QrCodeSteps.qrSuccessDevice.label.text}}</label></p>
+  </div>
+  <div class="col-sm-12">
+    <a href="#" class="btn btn-info" name="{{QrCodeSteps.qrRegDevice.input.name}}" ng-click="QrCodeSteps.onClick(QrCodeSteps.qrRegDevice.input.id)">{{QrCodeSteps.qrRegDevice.input.value}}</a>
+  </div>
 </div>
