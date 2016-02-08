@@ -55,7 +55,11 @@
     "./Themes/2016 Dark/MFAStyleSheet.css"
   ],
   "watch": "./Themes/2016 Dark/**/*",
-  "deploy": [],
+  "deploy": [
+    "New Location",
+    "Clear Recent Location",
+    "/Volumes/C/dev/Development/kphan/8.2/Src/MFC.WebApp.SecureAuth/Themes"
+  ],
   "deployName": "",
   "url": "",
   "devDest": ""

@@ -33,10 +33,8 @@ node_modules/
 dist
 
 # Theme folders config
-Themes/8.2 2016 Dark/config.json
-Themes/8.2 2016 Light/config.json
-Themes/9.0 2016 Dark/config.json
-Themes/9.0 2016 Light/config.json
+Themes/2016 Dark/config.json
+Themes/2016 Light/config.json
 
 # Sublime Text projects
 *.sublime-project
