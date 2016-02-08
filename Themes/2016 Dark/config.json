@@ -61,6 +61,6 @@
     "/Volumes/C/dev/Development/kphan/8.2/Src/MFC.WebApp.SecureAuth/Themes"
   ],
   "deployName": "",
-  "url": "",
-  "devDest": ""
+  "url": "https://vm-oc1-d0661.sadev.local/theme/",
+  "devDest": "/Volumes/C/dev/Development/kphan/8.2/Src/MFC.WebApp.SecureAuth/Themes/2016 Dark"
 }
