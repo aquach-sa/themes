@@ -5,9 +5,19 @@
       <h3>{{QrCodeSteps.qrStepOneTitle.label.text}}</h3>
       <p>{{QrCodeSteps.qrStepOneText.label.text}}</p>
     </div>
-    <div>
-      <a href=""><i class="qrcode__apple"></i></a>
-      <a href=""><i class="qrcode__google"></i></a>
+    <div class="form-group">
+      <a href="QrCodeSteps.qrThirdPartyImgLink.link.href" target="_blank" ng-repeat-start="img in QrCodeSteps.qrThirdPartyImgLink"><img class="qrcode__img-app" ng-src="{{QrCodeSteps.qrThirdPartyImg[$index].image.src}}"></a><br ng-if="$index === 0" ng-repeat-end>
+    </div>
+    <div class="form-group" ng-if="QrCodeSteps.qrThirdPartyAppTitle !== undefined">
+      <p>{{QrCodeSteps.qrThirdPartyAppTitle.label.text}}
+      <p>
+        <a href="app.link.href" target="_blank" ng-repeat-start="app in QrCodeSteps.qrThirdPartyAppLink">{{app.link.text}}</a> 
+        <span ng-if="$index === 0" ng-repeat-end>| </span>
+      </p>
+      <p>
+        <span>{{QrCodeSteps.qrThirdPartyAppText.label.text}}</span><br>
+        <a href="{{QrCodeSteps.qrThirdPartyAppTextLink.link.href}}" target="_blank">{{QrCodeSteps.qrThirdPartyAppTextLink.link.text}}</a>
+      </p>
     </div>
   </div>
 
@@ -21,7 +31,7 @@
       <img class="qrcode__img img-responsive" ng-src="{{QrCodeSteps.qrStepImage.image.src}}">
     </div>
 
-    <div class="form-group" ng-if="QrCodeSteps.qrSuccessMessage.label.text.length > 0">
+    <div class="form-group" ng-if="QrCodeSteps.qrThirdParty !== undefined">
       <div class="col-sm-12">
         <p>
           <input id="{{QrCodeSteps.qrThirdParty.input.id + '_UiInput'}}" class="form-control text-center" type="{{ QrCodeSteps.qrThirdParty.input.type}}" value="{{ QrCodeSteps.qrThirdParty.input.value}}" readonly>

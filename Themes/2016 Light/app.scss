@@ -861,22 +861,8 @@ h3.status__title {
   }
 }
 
-.qrcode__apple,
-.qrcode__google {
-  display: block;
-  height: 41px;
-  margin: 0 auto;
-  position: relative;
-  width: 135px;
-}
-
-.qrcode__apple {
-  background: url('../../Images/apple-app-badge.png') no-repeat 0 0;
+.qrcode__img-app {
   margin-bottom: 5px;
-}
-
-.qrcode__google {
-  background: url('../../Images/google-app-badge.png') no-repeat 0 0;
 }
 
 .qrcode__img {

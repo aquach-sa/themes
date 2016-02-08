@@ -58,6 +58,36 @@ angular.module('secureauth')
       return domModel.getLabelData(label);
     };
 
+    this.getQrThirdPartyImgLink = function () {
+      var image = angular.element('#googleAuthLink').find('a');
+      return domModel.getImageData(image);
+    };
+
+    this.getQrThirdPartyImg = function () {
+      var image = angular.element('#googleAuthLink').find('img');
+      return domModel.getImageData(image);
+    };
+
+    this.getQrThirdPartyAppTitle = function () {
+      var label = angular.element('#ContentPlaceHolder1_GoogleAuthDiv > label:eq(0)');
+      return domModel.getLabelData(label);
+    };
+
+    this.getQrThirdPartyAppLink = function () {
+      var link = angular.element('#googleAuthDivLink').find('a');
+      return domModel.getLinkData(link);
+    };
+
+    this.getQrThirdPartyAppText = function () {
+      var label = angular.element('#googleAuthDivText');
+      return domModel.getLabelData(label);
+    };
+
+    this.getQrThirdPartyAppTextLink = function () {
+      var link = angular.element('#googleAuthDivTextLink');
+      return domModel.getLinkData(link);
+    };
+
     this.getQrThirdParty = function () {
       var label = angular.element('#ContentPlaceHolder1_OATHSeedLabel');
       var input = angular.element('#ContentPlaceHolder1_OATHSeedInput');
