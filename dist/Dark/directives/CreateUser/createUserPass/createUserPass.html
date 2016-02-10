@@ -1,6 +1,6 @@
 <div class="form-group">
   <div class="col-sm-12">
-    <button class="btn btn-primary" name="{{CreateUserPass.createBtn.button.name}}" ng-click="CreateUserPass.create(CreateUserPass.createBtn.button.id)" ng-disabled="CreateUserPass.new.length == 0 || CreateUserPass.confirm.length == 0 || (CreateUserPass.new !== CreateUserPass.confirm) || CreateUserName.userNameMsg.label.text.indexOf('not') > -1">{{CreateUserPass.createBtn.button.value}}</button>
+    <button class="btn btn-primary" name="{{CreateUserPass.createBtn.button.name}}" ng-click="CreateUserPass.create(CreateUserPass.createBtn.button.id)" ng-disabled="CreateUserPass.new.length === 0 || CreateUserPass.confirm.length === 0 || CreateUserName.userNameMsg.label.text.indexOf('not') > -1">{{CreateUserPass.createBtn.button.value}}</button>
     <button class="btn btn-default" name="{{CreateUserPass.createReset.button.name}}" ng-click="CreateUserPass.reset(CreateUserPass.createReset.button.id)">{{CreateUserPass.createReset.button.value}}</button>
   </div>
 </div>

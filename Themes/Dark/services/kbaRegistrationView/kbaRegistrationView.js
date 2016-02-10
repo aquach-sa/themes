@@ -15,22 +15,6 @@ angular.module('secureauth')
     };
 
     this.getkbaQuestionAnswer =function () {
-      // var qa = angular.element('#ContentPlaceHolder1_MFALoginControl1_KBARegistrationView_container1 tr:gt(1) td:not(:first-child)');
-      // var data = [];
-      // qa.map(function(i, obj) {
-      //   if (!/Before/i.test(obj.id) && !/Indicator/i.test(obj.id)) {
-      //     var label = angular.element('#' + obj.id).find('span');
-      //     var input = angular.element('#' + obj.id).find('input');
-      //     if (label.length > 0) {
-      //       data.push(domModel.getLabelData(label));
-      //     }
-      //     if (input.length > 0) {
-      //       data.push(domModel.getInputData(input));
-      //     }
-      //   }
-      // }).get();
-      // return data;
-
       var label = angular.element('#ContentPlaceHolder1_MFALoginControl1_KBARegistrationView_container1 tr:gt(1) td:not(:first-child)').find('span');
       var input = angular.element('#ContentPlaceHolder1_MFALoginControl1_KBARegistrationView_container1 tr:gt(1) td:not(:first-child)').find('input');
       return domModel.getLabelInputData(label, input);
