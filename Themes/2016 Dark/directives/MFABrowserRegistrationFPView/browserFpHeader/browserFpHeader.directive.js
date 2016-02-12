@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('secureauth')
-  .directive('browserFpHeader', function (config, browserRegFP, $timeout) {
+  .directive('browserFpHeader', function (config, browserRegFP) {
 
     var browserFpHeaderController = function () {
       var vm = this;
