@@ -2,6 +2,6 @@
   {{ManageUserName.noUsername.label.text}}
 </div>
         
-<div class="alert" ng-if="ManageAcctMessage.message.label.text.length > 0" ng-class="{'alert-success': ManageAcctMessage.message.label.text.indexOf('successfully') > -1}">
+<div class="alert" ng-if="ManageAcctMessage.message.label.text.length > 0" ng-class="{'alert-success': ManageAcctMessage.message.label.text.indexOf('successfully') > -1, 'alert-danger': ManageAcctMessage.message.label.text.indexOf('Error') > -1}">
   {{ManageAcctMessage.message.label.text}}
 </div>
