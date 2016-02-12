@@ -7,8 +7,18 @@ angular.module('secureauth')
       var vm = this;
 
       angular.extend(vm, {
-        headerTxt: browserRegFP.getHeaderTxt()[0]
+        showSpinner: true,
+        headerTxt: browserRegFP.getHeaderTxt()[0],
+        debugDF: function () {
+          var debugFP = angular.element('#ContentPlaceHolder1_MFALoginControl1_MFABrowserRegistrationFPView');
+          if (debugFP.length > 0) {
+            vm.showSpinner = false;
+            debugFP.appendTo('.form-horizontal');
+          }
+        } 
       });
+
+      vm.debugDF();
 
     };
 
