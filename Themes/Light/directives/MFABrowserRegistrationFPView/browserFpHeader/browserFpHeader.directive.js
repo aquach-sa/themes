@@ -1,14 +1,24 @@
 'use strict';
 
 angular.module('secureauth')
-  .directive('browserFpHeader', function (config, browserRegFP, $timeout) {
+  .directive('browserFpHeader', function (config, browserRegFP) {
 
     var browserFpHeaderController = function () {
       var vm = this;
 
       angular.extend(vm, {
-        headerTxt: browserRegFP.getHeaderTxt()[0]
+        showSpinner: true,
+        headerTxt: browserRegFP.getHeaderTxt()[0],
+        debugDF: function () {
+          var debugFP = angular.element('#ContentPlaceHolder1_MFALoginControl1_MFABrowserRegistrationFPView');
+          if (debugFP.length > 0) {
+            vm.showSpinner = false;
+            debugFP.appendTo('.form-horizontal');
+          }
+        }
       });
+
+      vm.debugDF();
 
     };
 
