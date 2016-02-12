@@ -9,7 +9,7 @@ angular.module('secureauth')
     };
 
     this.getQrStepOneTitle = function () {
-      var label = angular.element('#ContentPlaceHolder1_InstallDiv > label:eq(0)');
+      var label = angular.element('#installDivTitle');
       return domModel.getLabelData(label);
     };
 
@@ -19,7 +19,7 @@ angular.module('secureauth')
     };
 
     this.getQrStepTwoTitle = function () {
-      var label = angular.element('#ContentPlaceHolder1_ScanDiv > label:eq(0)');
+      var label = angular.element('#scanDivTitle');
       return domModel.getLabelData(label);
     };
 
@@ -29,7 +29,7 @@ angular.module('secureauth')
     };
 
     this.getQrStepThreeTitle = function () {
-      var label = angular.element('#ContentPlaceHolder1_ConfirmDiv > label:eq(0)');
+      var label = angular.element('#confirmDivTitle');
       return domModel.getLabelData(label);
     };
 
@@ -69,7 +69,7 @@ angular.module('secureauth')
     };
 
     this.getQrThirdPartyAppTitle = function () {
-      var label = angular.element('#ContentPlaceHolder1_GoogleAuthDiv > label:eq(0)');
+      var label = angular.element('#googleAuthDivTitle');
       return domModel.getLabelData(label);
     };
 
