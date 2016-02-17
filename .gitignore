@@ -32,10 +32,6 @@ node_modules/
 # Dist folder
 dist/
 
-# Build file
-gulp/tasks/theme.develop.js
-gulp/tasks/theme.sync.js
-
 # Theme folder
 Themes/Dark
 Themes/Light
