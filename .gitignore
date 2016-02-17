@@ -37,8 +37,8 @@ gulp/tasks/theme.develop.js
 gulp/tasks/theme.sync.js
 
 # Theme folder
-Themes/2016 Dark
-Themes/2016 Light
+Themes/Dark
+Themes/Light
 
 # Sublime Text projects
 *.sublime-project
