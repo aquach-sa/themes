@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('secureauth')
-  .directive('manageAcctPassword', function (config, manageAccount) {
+  .directive('manageAcctPassword', function (config, manageAccount, $timeout) {
 
     var manageAcctPasswordController = function () {
       var vm = this;
@@ -13,6 +13,7 @@ angular.module('secureauth')
         acctPassCloseBtn: manageAccount.getAcctPassCloseBtn()[0],
         acctPassResetBtn: manageAccount.getAcctPassResetBtn()[0],
         errorText: manageAccount.getErrorText()[0],
+        required: true,
         password: '',
         confirm: '',
         onChange: function (id) {
@@ -25,6 +26,7 @@ angular.module('secureauth')
         },
         closeModal: function () {
           var button = angular.element('#ContentPlaceHolder1_CancelResetPasswordModalButton');
+          vm.required = false;
           button.trigger('click');
         },
         showModal: function () {
@@ -33,6 +35,15 @@ angular.module('secureauth')
           if (modalVisible !== 'none' && modal.length > 0) {
             modal.parent().addClass('ng-cloak');
             angular.element('#resetPassword').modal();
+          }
+        },
+        onKey: function ($event) {
+          var keyCode = $event.which || $event.keyCode;
+          var resetButton = angular.element('#resetPassBtn');
+          if (keyCode === 13) {
+            $timeout( function () {
+              resetButton.trigger('click');
+            });
           }
         },
         init: function () {
