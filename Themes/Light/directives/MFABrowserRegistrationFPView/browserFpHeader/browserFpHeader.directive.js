@@ -15,7 +15,7 @@ angular.module('secureauth')
             vm.showSpinner = false;
             debugFP.appendTo('.form-horizontal');
           }
-        }
+        } 
       });
 
       vm.debugDF();
