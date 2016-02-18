@@ -1,0 +1,8 @@
+<div class="col-sm-12" ng-if="UserSocialLogin.socialLoginHeader">
+  <div class="row">
+    <h4 class="sidebar__subtitle subtitle--social">{{UserSocialLogin.socialLoginHeader.label.text}}</h4>
+    <p>
+      <a href="{{social.link.href}}" ng-repeat="social in UserSocialLogin.socialLogin"><span class="link--color link--social-text">{{social.link.text}}</span></a>
+    </p>
+  </div>
+</div>

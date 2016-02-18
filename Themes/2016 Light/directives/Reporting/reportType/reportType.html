@@ -1,0 +1,29 @@
+<div class="form-group">
+
+  <div class="col-sm-10 col-sm-offset-2">
+    <div class="row">
+      
+      <div class="col-sm-12" ng-repeat="type in ReportType.successfulAuth">
+        <input id="{{type.input.id + '_UiInput'}}" value="{{type.input.value}}" type="{{type.input.type}}" name="{{type.input.name + '_UiInput'}}" ng-click="ReportType.onClick(type.input.id)" ng-checked="{{type.input.check}}"> <label for="{{type.label.for + '_UiInput'}}">{{type.label.text}}</label>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="failed__type" ng-repeat="type in ReportType.failedAuth">
+          <input id="{{type.input.id + '_UiInput'}}" value="{{type.input.value}}" type="{{type.input.type}}" name="{{type.input.name + '_UiInput'}}" ng-click="ReportType.onClick(type.input.id)"> <label for="{{type.label.for + '_UiInput'}}">{{type.label.text}}</label>
+        </div>
+        <div id="failedOption" class="failed__option" ng-repeat="type in ReportType.failedOption">
+          <input id="{{type.input.id + '_UiInput'}}" value="{{type.input.value}}" type="{{type.input.type}}" name="{{type.input.name + '_UiInput'}}" ng-click="ReportType.onClick(type.input.id)" ng-checked="{{type.input.check}}" ng-disabled="{{type.input.disabled}}"> <label for="{{type.label.for + '_UiInput'}}">{{type.label.text}}</label>
+        </div>
+      </div>
+
+      <div class="row"></div>
+
+      <div class="col-sm-12">
+        <input id="{{type.input.id + '_UiInput'}}" class="pull-left" value="{{type.input.value}}" type="{{type.input.type}}" name="{{type.input.name + '_UiInput'}}" ng-click="ReportType.onClick(type.input.id)" ng-checked="{{type.input.check}}" ng-repeat="type in ReportType.otherOption" ng-if="type.input.type === 'radio'">
+        <input id="{{type.input.id + '_UiInput'}}" value="{{type.input.value}}" type="{{type.input.type}}" class="form-control other__option" autocomplete="off" placeholder="Event ID (or * for all)" ng-disabled="{{type.input.disabled}}" ng-model="$index" ng-change="ReportType.onChange(type.input.id)" ng-init="$index = type.input.value" ng-repeat="type in ReportType.otherOption" ng-if="type.input.type === 'text'">
+      </div>
+
+    </div>
+  </div>
+
+</div>

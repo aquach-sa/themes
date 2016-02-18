@@ -1,0 +1,8 @@
+<div class="form-group">
+  <label class="col-sm-2">{{ReportGroupBy.groupByTxt.label.text}}</label>
+  <div class="col-sm-10">
+    <div class="groupby__option pull-left" ng-repeat="group in ReportGroupBy.groupByCheck">
+      <input id="{{group.input.id + '_UiInput'}}" value="{{group.input.value}}" type="{{group.input.type}}" ng-checked="{{group.input.check}}" ng-click="ReportGroupBy.onCheck(group.input.id)"> <label for="{{group.input.id + '_UiInput'}}">{{group.label.text}}</label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="form-group" ng-repeat="method in AuthMethod.authMethodId" ng-if="method.label.text !== ' *'">
+  <label class="col-sm-12 login__username" ng-if="method.label.text !== ' *' && method.input.id.length > 0">{{method.label.text}}</label>
+  <div class="col-sm-12">
+    <input id="{{method.input.id + '_UiInput'}}" type="{{method.input.type}}" class="form-control" placeholder="{{method.input.placeholder}}" autocomplete="off" ng-model="AuthMethod.user" ng-change="AuthMethod.getMethodOnChange(method.input.id, $event)" ng-disabled="{{method.input.disabled}}" ng-if="method.label.text !== ' *' && method.input.id.length > 0" ng-init="AuthMethod.getUser()" tabindex="0" focus-if required>
+    <a class="help-block link--color" ng-if="AuthMethod.forgotUser.link" href="{{AuthMethod.forgotUser.link.href}}">{{AuthMethod.forgotUser.link.text}}</a>
+  </div>
+</div>
+
+<div class="form-group" ng-repeat="method in AuthMethod.authMethodPass" ng-if="method.label.text !== ' *'">
+  <label class="col-sm-12 login__pasword" ng-if="method.label.text !== ' *' && method.input.id.length > 0">{{method.label.text}}</label>
+  <div class="col-sm-12">
+    <input id="{{method.input.id + '_UiInput'}}" type="{{method.input.type}}" class="form-control" placeholder="{{method.input.placeholder}}" autocomplete="off" ng-model="AuthMethod.pass" ng-change="AuthMethod.getPassOnChange(method.input.id, $event)" ng-disabled="{{method.input.disabled}}" ng-if="method.label.text !== ' *' && method.input.id.length > 0" ng-init="AuthMethod.getPass()" tabindex="0" focus-if="AuthMethod.authMethodId[0].label.text.length === 0" required>
+    <a class="help-block link--color" ng-if="AuthMethod.forgotPass.link" href="{{AuthMethod.forgotPass.link.href}}">{{AuthMethod.forgotPass.link.text}}</a>
+  </div>
+</div>
