@@ -29,17 +29,12 @@ Temporary Items
 # NPM
 node_modules/
 
-# Dist folder
-dist/2016 Dark
-dist/2016 Light
-
 # Build file
 gulp/tasks/theme.develop.js
-gulp/tasks/theme.sync.js
 
-# Theme folder
-Themes/2016 Dark
-Themes/2016 Light
+# Theme files
+Themes/2016 Dark/*.vb
+Themes/2016 Light/*.vb
 
 # Sublime Text projects
 *.sublime-project
