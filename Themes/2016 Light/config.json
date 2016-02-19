@@ -58,9 +58,9 @@
   "deploy": [
     "New Location",
     "Clear Recent Location",
-    "/Volumes/C/dev/Development/kphan/9.0/Src/MFC.WebApp.SecureAuth/Themes"
+    "/Volumes/C/dev/Development/kphan/develop/Src/MFC.WebApp.SecureAuth/Themes"
   ],
   "deployName": "",
   "url": "https://vm-oc1-d0661.sadev.local/qr",
-  "devDest": "/Volumes/C/dev/Development/kphan/9.0/Src/MFC.WebApp.SecureAuth/Themes/2016 Light"
+  "devDest": "/Volumes/C/dev/Development/kphan/develop/Src/MFC.WebApp.SecureAuth/Themes/2016 Light"
 }
