@@ -39,11 +39,11 @@ Themes within `dist` are pre-built and ready for production.
 HTML are spread accross many sub folder within two main folder for each theme. The HTML are heavily using Angular syntax. Be cautious when removing any `ng-` or `{{ }}` syntax from the HTML files. 
 
 ```
-- Dark
+- 2016 Dark
   - directives
   - views
 
-- Light
+- 2016 Light
   - directives
   - views
 ```
