@@ -104,7 +104,6 @@ gulp.task('theme:create:view', false, function () {
 });
 
 gulp.task('theme:create:view:scss', false, function () {
-  console.log(theme + '/app.scss');
   return gulp.src(theme + '/app.scss')
     .pipe(vinylPaths(del))
     .pipe(inject.before('// ng-state', '[ng-state="' + viewName + '"],\n'))

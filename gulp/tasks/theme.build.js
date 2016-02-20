@@ -21,7 +21,7 @@ var watchFiles    = false;
 var config;
 var theme;
 
-fs.readdirSync('./Themes/').filter(function (folder) {
+fs.readdirSync('./Themes').filter(function (folder) {
   if (fs.lstatSync('./Themes/' + folder).isDirectory()) {
     themes.push(folder);
   }
