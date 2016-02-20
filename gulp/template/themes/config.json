@@ -43,7 +43,7 @@
     "!./Themes/{{themeName}}/config.json"
   ],
   "clean": [
-    "./dist/Themes/2016 Light"
+    "./dist/Themes/{{themeName}}"
   ],
   "build": [
     "./Themes/{{themeName}}/app.min.js",
