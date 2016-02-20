@@ -37,7 +37,6 @@ Themes/2016 Dark/*.vb
 Themes/2016 Light/*.vb
 
 # Dist folder
-dist/Themes/.git
 dist/Themes/2012
 dist/Themes/2013
 !dist/Themes/2016 Dark
