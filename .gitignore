@@ -30,7 +30,10 @@ Temporary Items
 node_modules/
 
 # Dist folder
-dist/
+dist/Themes/2012
+dist/Themes/2013
+dist/Themes/Legacy
+dist/Themes/OTP App Default
 
 # Sublime Text projects
 *.sublime-project
