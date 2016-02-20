@@ -1,0 +1,42 @@
+<div class="modal fade" id="resetPin" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" ng-click="ManageAcctPin.closeModal()"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Reset PIN</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-horizontal">
+
+          <div class="form-group" ng-repeat="pass in ManageAcctPin.newPin">
+            <label class="col-sm-4">{{pass.label.text}}</label>
+            <div class="col-sm-8">
+              <input id="{{pass.input.id + '_UiInput'}}" type="{{pass.input.type}}" class="form-control" ng-model="ManageAcctPin.pin" ng-change="ManageAcctPin.onChange(pass.input.id)">
+            </div>
+          </div>
+
+          <div class="form-group" ng-repeat="pass in ManageAcctPin.confirmPin">
+            <label class="col-sm-4">{{pass.label.text}}</label>
+            <div class="col-sm-8">
+              <input id="{{pass.input.id + '_UiInput'}}" type="{{pass.input.type}}" class="form-control" ng-model="ManageAcctPin.confirm" ng-change="ManageAcctPin.onChange(pass.input.id)">
+            </div>
+            <div class="col-sm-12" ng-show="(ManageAcctPin.pin !== ManageAcctPin.confirm) && (ManageAcctPin.pin.length > 0 && ManageAcctPin.confirm.length > 0)">
+              <span class="help-block">{{ManageAcctPin.pinErrorText.label.text}}</span>
+            </div>
+          </div>
+
+          <div class="form-group" ng-if="ManageAcctPin.acctPinMsg.label.text.length > 0">
+            <div class="col-sm-12">
+              <span>{{ManageAcctPin.acctPinMsg.label.text}}</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-default" ng-click="ManageAcctPin.closeModal()">{{ManageAcctPin.acctPinCloseBtn.button.value}}</a>
+        <a class="btn btn-primary" ng-click="ManageAcctPin.resetPin(ManageAcctPin.acctPinResetBtn.button.id)" ng-disabled="ManageAcctPin.pin.length == 0 || ManageAcctPin.confirm.length == 0 || (ManageAcctPin.pin !== ManageAcctPin.confirm) || ManageAcctPin.acctPinResetBtn.button.disabled">{{ManageAcctPin.acctPinResetBtn.button.value}}</a>
+      </div>
+    </div>
+  </div>
+</div>

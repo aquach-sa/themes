@@ -1,5 +1,0 @@
-[submodule "dist/Themes"]
-	path = dist/Themes
-	url = git@sagithub-ent.secureauth.com:kphan/tfs-themes.git
-	ignore = none
-	fetchrecursesubmodules = false
