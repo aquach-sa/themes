@@ -1,0 +1,3 @@
+[submodule "TFS/Themes"]
+	path = TFS/Themes
+	url = git@sagithub-ent.secureauth.com:kphan/tfs-themes.git
