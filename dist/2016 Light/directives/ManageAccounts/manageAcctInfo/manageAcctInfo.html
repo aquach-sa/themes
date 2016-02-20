@@ -1,6 +1,0 @@
-<div class="form-group" ng-repeat="info in ManageAcctInfo.acctInfo">
-  <label class="col-sm-2">{{info.label.text}}</label>
-  <div class="col-sm-10">
-    <input id="{{info.input.id + '_UiInput'}}" value="{{info.input.value}}" type="text" class="form-control" autocomplete="off" ng-readonly="info.input.readonly" ng-model="$index" ng-change="ManageAcctInfo.acctInfoOnChange(info.input.id)" ng-init="$index = info.input.value">
-  </div>
-</div>
