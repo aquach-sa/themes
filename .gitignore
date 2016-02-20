@@ -30,9 +30,10 @@ Temporary Items
 node_modules/
 
 # Dist folder
-dist/Themes/.git
 dist/Themes/2012
 dist/Themes/2013
+!dist/Themes/2016 Dark
+!dist/Themes/2016 Light
 dist/Themes/Legacy
 dist/Themes/OTP App Default
 
