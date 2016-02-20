@@ -126,7 +126,9 @@ gulp.task('theme:build:deploy:new', false, function () {
 });
 
 gulp.task('theme:build:deploy:clean', false,  function () {
-  del([config.dest]);
+  return gulp.src(config.clean)
+    .pipe(vinylPaths(del))
+    .on('error', error);
 });
 
 gulp.task('theme:build:deploy:css', false, function () {

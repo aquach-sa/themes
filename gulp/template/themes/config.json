@@ -42,11 +42,14 @@
     "!./Themes/{{themeName}}/app.scss",
     "!./Themes/{{themeName}}/config.json"
   ],
+  "clean": [
+    "./dist/Themes/2016 Light"
+  ],
   "build": [
     "./Themes/{{themeName}}/app.min.js",
     "./Themes/{{themeName}}/MFAStyleSheet.css"
   ],
-  "dest": "./dist/{{themeName}}",
+  "dest": "./dist/Themes/{{themeName}}",
   "source": "./Themes/{{themeName}}",
   "pristine": [
     "./Themes/{{themeName}}/app.min.js",
