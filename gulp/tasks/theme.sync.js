@@ -35,7 +35,7 @@ gulp.task('theme:sync', false, function() {
       choices: themes
     }, function (res) {
       destination = path + 'Themes/' + res.theme;
-      copyDir.sync(source, destination, function(_stat, _path, _file) {
+      copyDir.sync(source, destination, function(_stat, _path) {
         var stat = true;
         if (_stat === 'file' && filePath.extname(_path) === '.Master') {
           stat = false;

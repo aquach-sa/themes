@@ -191,8 +191,7 @@ gulp.task('theme:deploy', false, function () {
       try {
         copyDir.sync(config.dest, deployPath + '/' + file);
       } catch(err) {
-        console.log(err);
-        error('[' + time.getTime() + '] Permission denied');
+        error('[' + time.getTime() + '] Permission denied, open ' + err.path);
         console.log('[' + time.getTime() + '] ' + chalk.red('Please verify that you have the correct folder permission set'));
       }
     }))
