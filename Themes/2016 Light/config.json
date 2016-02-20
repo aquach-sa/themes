@@ -37,15 +37,19 @@
     "./Themes/2016 Light/theme.js",
     "./Themes/2016 Light/MFAStyleSheet.css",
     "./Themes/2016 Light/*.Master",
+    "!./Themes/2016 Light/*.vb",
     "!./Themes/2016 Light/app.js",
     "!./Themes/2016 Light/app.scss",
     "!./Themes/2016 Light/config.json"
+  ],
+  "clean": [
+    "./dist/Themes/2016 Light"
   ],
   "build": [
     "./Themes/2016 Light/app.min.js",
     "./Themes/2016 Light/MFAStyleSheet.css"
   ],
-  "dest": "./dist/2016 Light",
+  "dest": "./dist/Themes/2016 Light",
   "source": "./Themes/2016 Light",
   "pristine": [
     "./Themes/2016 Light/app.min.js",

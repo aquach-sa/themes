@@ -21,7 +21,7 @@ var watchFiles    = false;
 var config;
 var theme;
 
-fs.readdirSync('./Themes').filter(function (folder) {
+fs.readdirSync('./Themes/').filter(function (folder) {
   if (fs.lstatSync('./Themes/' + folder).isDirectory()) {
     themes.push(folder);
   }
@@ -58,7 +58,9 @@ gulp.task('theme:build', 'Build a specific theme.',  function() {
 });
 
 gulp.task('theme:build:clean', false,  function () {
-  del([config.dest]);
+  return gulp.src(config.clean)
+    .pipe(vinylPaths(del))
+    .on('error', error);
 });
 
 gulp.task('theme:build:css', false, function () {

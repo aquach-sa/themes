@@ -37,15 +37,19 @@
     "./Themes/2016 Dark/theme.js",
     "./Themes/2016 Dark/MFAStyleSheet.css",
     "./Themes/2016 Dark/*.Master",
+    "!./Themes/2016 Dark/*.vb",
     "!./Themes/2016 Dark/app.js",
     "!./Themes/2016 Dark/app.scss",
     "!./Themes/2016 Dark/config.json"
+  ],
+  "clean": [
+    "./dist/Themes/2016 Light"
   ],
   "build": [
     "./Themes/2016 Dark/app.min.js",
     "./Themes/2016 Dark/MFAStyleSheet.css"
   ],
-  "dest": "./dist/2016 Dark",
+  "dest": "./dist/Themes/2016 Dark",
   "source": "./Themes/2016 Dark",
   "pristine": [
     "./Themes/2016 Dark/app.min.js",
