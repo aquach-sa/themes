@@ -58,7 +58,9 @@ gulp.task('theme:build', 'Build a specific theme.',  function() {
 });
 
 gulp.task('theme:build:clean', false,  function () {
-  del([config.dest]);
+  return gulp.src(config.clean)
+    .pipe(vinylPaths(del))
+    .on('error', error);
 });
 
 gulp.task('theme:build:css', false, function () {
