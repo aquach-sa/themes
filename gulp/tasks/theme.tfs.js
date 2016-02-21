@@ -31,3 +31,21 @@ gulp.task('theme:tfs:copy', false, function() {
     })
     .on('error', error);
 });
+
+gulp.task('theme:tfs:config', false, function() {
+  return gulp.src('')
+    .pipe(gulpFn(function() {
+      exec('cd TFS && git tf configure http://wn-oc1-d0300.secureauth.local:8080/tfs/ProductionCollection/ $/Appliance/Appliance/Development/9.0/Src/MFC.WebApp.SecureAuth/Themes', function (err, stdout, stderr) {
+        console.log(stdout);
+        if (stderr.length > 0) {
+          console.log(stderr);
+        }
+        exec('cd TFS && git tf pull', function (err, stdout, stderr) {
+          console.log(stdout);
+          if (stderr.length > 0) {
+            console.log(stderr);
+          }
+        });
+      });
+    }));
+});
