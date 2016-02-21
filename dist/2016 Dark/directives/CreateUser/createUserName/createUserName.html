@@ -1,0 +1,6 @@
+<div class="form-group" ng-repeat="info in CreateUserName.userName">
+  <label class="col-sm-2">{{info.label.text}}</label>
+  <div class="col-sm-10">
+    <input id="{{info.input.id + '_UiInput'}}" value="{{info.input.value}}" type="{{info.input.type}}" class="form-control" autocomplete="off" ng-model="CreateUserName.name" ng-init="CreateUserName.name = info.input.value" ng-blur="CreateUserName.onBlur(info.input.id)" ng-change="CreateUserName.onChange(info.input.id)" focus-if="{{info.input.value.length === 0}}">
+  </div>
+</div>

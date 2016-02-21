@@ -1,0 +1,13 @@
+<div class="form-group">
+  <label class="col-sm-2">{{AccountUpdateDfp.dfpTxt.label.text}}</label>
+  <div class="col-sm-10">
+    <div class="dfp-collapse" ng-repeat="info in AccountUpdateDfp.dfpDeviceLog">
+      <i class="glyphicon glyphicon-plus" data-toggle="collapse" data-target="{{'#' + info.input.id + 'UiToggle'}}" ng-if="info.input" ng-click="toggle = !toggle" ng-class="{'glyphicon-minus' : toggle}" ></i> <input type="{{info.input.type}}" ng-checked="{{info.input.check}}" ng-click="AccountUpdateDfp.check(info.input.id)" ng-if="info.input"> <span>{{info.label.text}}</span>
+      <div id="{{info.input.id + 'UiToggle'}}" class="collapse col-sm-12">
+        <ul class="col-sm-12 list-unstyled">
+          <li ng-repeat="log in AccountUpdateDfp.dfpDeviceLog[$index].logs">{{log}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
