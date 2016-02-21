@@ -31,6 +31,8 @@ node_modules/
 
 # Build file
 gulp/tasks/theme.develop.js
+gulp/tasks/theme.sync.js
+gulp/tasks/theme.tfs.js
 
 # Theme files
 Themes/2016 Dark/*.vb
