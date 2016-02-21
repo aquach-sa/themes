@@ -1,0 +1,15 @@
+<div class="alert" ng-if="ResetAccountPass.successMsg.label.text.length > 0" ng-class="{'alert-success': ResetAccountPass.successMsg.label.text.indexOf('successful') > -1, 'alert-danger': ResetAccountPass.successMsg.label.text.indexOf('Failed') > -1}">
+  {{ResetAccountPass.successMsg.label.text}}
+</div>
+
+<div class="alert alert-warning" ng-show="(ResetAccountPass.new !== ResetAccountPass.confirm) && (ResetAccountPass.new.length > 0 && ResetAccountPass.confirm.length > 0)">
+  {{ResetAccountPass.resetMsg.label.text}}
+</div>
+
+<div id="{{ResetAccountMessage.resetAccountMsg.label.id + '_UiInput'}}" class="alert alert-danger" ng-if="ResetAccountMessage.resetAccountMsg.label.text.length > 5">
+  {{ResetAccountMessage.resetAccountMsg.label.text}}
+</div>
+
+<div id="{{ResetAccountMessage.resetUnlockMsg.label.id + '_UiInput'}}" class="alert alert-success" ng-if="ResetAccountMessage.resetUnlockMsg.label.text.length > 0">
+  {{ResetAccountMessage.resetUnlockMsg.label.text}}
+</div>

@@ -1,0 +1,13 @@
+<div class="form-group" ng-repeat="info in UserExpired.userNewPass">
+  <label class="col-sm-12 login__username">{{info.label.text}}</label>
+  <div class="col-sm-12">
+    <input id="{{info.input.id + '_UiInput'}}" value="{{info.input.value}}" type="{{info.input.type}}" class="form-control" autocomplete="off" required ng-model="UserExpired.new" ng-init="UserExpired.new = info.input.value" ng-change="UserExpired.passOnChange(info.input.id)">
+  </div>
+</div>
+
+<div class="form-group" ng-repeat="info in UserExpired.userPassConfirm">
+  <label class="col-sm-12 login__pasword">{{info.label.text}}</label>
+  <div class="col-sm-12">
+    <input id="{{info.input.id + '_UiInput'}}" value="{{info.input.value}}" type="{{info.input.type}}" class="form-control" autocomplete="off" required ng-model="UserExpired.confirm" ng-init="UserExpired.confirm = info.input.value" ng-change="UserExpired.passOnChange(info.input.id)">
+  </div>
+</div>

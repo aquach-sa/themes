@@ -1,0 +1,12 @@
+<div class="form-group regmethod" ng-repeat="method in RegMethodOption.regMethodOptions" ng-init="RegMethodOption.secondaryOpt()">
+  <div class="col-xs-12" ng-class="{'regmethod--last': $last}">
+    <div class="regmethod__primary">
+      <input id="{{method.input.id + '_UiInput'}}" type="{{method.input.type}}" name="{{method.input.name + '_UiName'}}" ng-click="RegMethodOption.select(method.input.id, method.options[0].id, method.options[1].id)" ng-checked="{{method.input.check}}">
+      <label for="{{method.input.id + '_UiInput'}}">{{method.label.text}}</label>
+    </div>
+    <div class="regmethod__secondary" ng-if="method.options[0].id.length > 0 || method.options[1].id.length > 0">
+      <input id="{{method.options[0].id + '_UiInput'}}" class="js-options" type="radio" name="{{method.options[0].name + '_UiName'}}" ng-checked="{{method.options[0].check}}" ng-disabled="true" ng-if="method.options[0].id.length > 0" ng-click="RegMethodOption.selectOption(method.options[0].for)"> <label for="{{method.options[0].id + '_UiInput'}}" ng-if="method.options[0].id.length > 0">{{method.options[0].text}}</label>
+      <input id="{{method.options[1].id + '_UiInput'}}" class="js-options" type="radio" name="{{method.options[1].name + '_UiName'}}" ng-checked="{{method.options[1].check}}" ng-disabled="true" ng-if="method.options[1].id.length > 0" ng-click="RegMethodOption.selectOption(method.options[1].for)"> <label for="{{method.options[1].id + '_UiInput'}}" ng-if="method.options[1].id.length > 0">{{method.options[1].text}}</label>
+    </div>
+  </div>
+</div>
