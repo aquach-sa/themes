@@ -1,0 +1,15 @@
+<div class="alert hide--msg" ng-class="{'alert-danger show': CreateUserMessage.userNameMsg.label.text.indexOf('not') > -1, 'alert-success show': CreateUserMessage.userNameMsg.label.text.indexOf('available') > -1 }">
+  {{CreateUserMessage.userNameMsg.label.text}}
+</div>
+
+<div class="alert alert-success" ng-if="CreateUserMessage.successMsg.label.text.length > 0">
+  {{CreateUserMessage.successMsg.label.text}}
+</div>
+
+<div class="alert" ng-if="CreateUserMessage.errorMsg.label.text.length > 0" ng-class="{ 'alert-danger': CreateUserMessage.errorMsg.label.text.indexOf('already') > -1, 'alert-success': CreateUserMessage.userNameMsg.label.text.indexOf('success') > -1 }">
+  {{CreateUserMessage.errorMsg.label.text}}
+</div>
+
+<div class="alert alert-warning" ng-show="(CreateUserPass.new !== CreateUserPass.confirm) && (CreateUserPass.new.length > 0 && CreateUserPass.confirm.length > 0)">
+  {{CreateUserMessage.validatorMsg.label.text}}
+</div>

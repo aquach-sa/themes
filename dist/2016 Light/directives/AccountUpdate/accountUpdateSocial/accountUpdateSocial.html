@@ -1,0 +1,10 @@
+<div class="form-group" ng-if="AccountUpdateSocial.socialLoginHeader.label.text.length > 0">
+  <label class="col-sm-2">{{AccountUpdateSocial.socialLoginHeader.label.text}}</label>
+  <div class="col-sm-10">
+    <ul class="list-unstyled">
+      <li ng-repeat="social in AccountUpdateSocial.socialLogin">
+        <a href="{{social.link.href}}">{{social.link.text}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

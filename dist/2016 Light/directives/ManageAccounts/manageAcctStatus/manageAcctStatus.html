@@ -1,0 +1,3 @@
+<p ng-repeat="status in ManageAcctStatus.acctstatus" ng-if="status.label.text.length > 0">
+  <span id="{{status.label.id + '_UiInput'}}" ng-class="{'text-success': $last}">{{status.label.text}}</p>
+</p>
