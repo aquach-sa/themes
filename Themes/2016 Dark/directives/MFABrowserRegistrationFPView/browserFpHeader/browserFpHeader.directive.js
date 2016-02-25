@@ -10,10 +10,11 @@ angular.module('secureauth')
         showSpinner: true,
         headerTxt: browserRegFP.getHeaderTxt()[0],
         debugDF: function () {
-          var debugFP = angular.element('#ContentPlaceHolder1_MFALoginControl1_MFABrowserRegistrationFPView');
+          var debugFP = angular.element('#ContentPlaceHolder1_MFALoginControl1_MFABrowserRegistrationFPView_container0').next('div');
+          var debugFPMsg = angular.element('#ContentPlaceHolder1_MFALoginControl1_MFABrowserRegistrationFPView');
           if (debugFP.length > 0) {
             vm.showSpinner = false;
-            debugFP.appendTo('.form-horizontal');
+            debugFPMsg.appendTo('.form-horizontal');
           }
         } 
       });
