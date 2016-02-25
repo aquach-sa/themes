@@ -52,8 +52,8 @@
     <div class="form-inline">
       <div class="form-group">
         <div class="col-sm-12">
-          <input id="{{QrCodeSteps.qrStepVerifyInput.input.id + '_UiInput'}}" type="{{QrCodeSteps.qrStepVerifyInput.input.type}}" value="{{QrCodeSteps.qrStepVerifyInput.input.value}}" class="form-control qrcode__input" ng-model="QrCodeSteps.verify" ng-change="QrCodeSteps.onChange(QrCodeSteps.qrStepVerifyInput.input.id)" ng-init="QrCodeSteps.verify = QrCodeSteps.qrStepVerifyInput.input.value">
-          <a href="#" class="btn btn-info qrcode__button" name="{{QrCodeSteps.qrStepVerifyButton.input.name}}" ng-click="QrCodeSteps.onClick(QrCodeSteps.qrStepVerifyButton.input.id)">{{QrCodeSteps.qrStepVerifyButton.input.value}}</a>
+          <input id="{{QrCodeSteps.qrStepVerifyInput.input.id + '_UiInput'}}" type="{{QrCodeSteps.qrStepVerifyInput.input.type}}" value="{{QrCodeSteps.qrStepVerifyInput.input.value}}" class="form-control qrcode__input" ng-model="QrCodeSteps.verify" ng-change="QrCodeSteps.onChange(QrCodeSteps.qrStepVerifyInput.input.id)" ng-init="QrCodeSteps.verify = QrCodeSteps.qrStepVerifyInput.input.value" focus-if>
+          <button class="btn btn-info qrcode__button" name="{{QrCodeSteps.qrStepVerifyButton.input.name}}" ng-click="QrCodeSteps.onClick(QrCodeSteps.qrStepVerifyButton.input.id)">{{QrCodeSteps.qrStepVerifyButton.input.value}}</button>
           <p class="text-danger" ng-if="QrCodeSteps.qrStepVerifyError.label.text.length > 0">{{QrCodeSteps.qrStepVerifyError.label.text}}</p>
         </div>
       </div>
