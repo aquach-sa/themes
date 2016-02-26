@@ -1,7 +1,7 @@
 <div class="form-group" ng-repeat="method in AuthMethod.authMethodId" ng-if="method.label.text !== ' *'">
   <label class="col-sm-12 login__username" ng-if="method.label.text !== ' *' && method.input.id.length > 0">{{method.label.text}}</label>
   <div class="col-sm-12">
-    <input id="{{method.input.id + '_UiInput'}}" type="{{method.input.type}}" class="form-control" placeholder="{{method.input.placeholder}}" autocomplete="off" ng-model="AuthMethod.user" ng-change="AuthMethod.getMethodOnChange(method.input.id, $event)" ng-disabled="{{method.input.disabled}}" ng-if="method.label.text !== ' *' && method.input.id.length > 0" ng-init="AuthMethod.getUser()" tabindex="0" focus-if required>
+    <input id="{{method.input.id + '_UiInput'}}" type="{{method.input.type}}" class="form-control" placeholder="{{method.input.placeholder}}" autocomplete="off" ng-model="AuthMethod.user" ng-change="AuthMethod.getMethodOnChange(method.input.id)" ng-disabled="{{method.input.disabled}}" ng-if="method.label.text !== ' *' && method.input.id.length > 0" ng-init="AuthMethod.getUser()" tabindex="0" focus-if required>
     <a class="help-block link--color" ng-if="AuthMethod.forgotUser.link" href="{{AuthMethod.forgotUser.link.href}}">{{AuthMethod.forgotUser.link.text}}</a>
   </div>
 </div>
