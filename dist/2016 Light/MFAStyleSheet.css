@@ -4,6 +4,7 @@
 [ng-state="createuser"],
 [ng-state="forgotusername"],
 [ng-state="KBARegistrationView"],
+[ng-state="logout"],
 [ng-state="manageaccounts"],
 [ng-state="mobileappstore"],
 [ng-state="oidcauthorize"],
