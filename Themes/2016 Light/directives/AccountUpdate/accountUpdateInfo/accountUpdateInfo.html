@@ -8,7 +8,7 @@
 <div class="form-group" ng-repeat="pin in AccountUpdateInfo.acctInfoPin">
   <label class="col-sm-2">{{pin.label.text}}</label>
   <div class="col-sm-8">
-    <input id="{{pin.input.id + '_UiInput'}}" value="{{pin.input.value}}" type="{{pin.input.type}}" class="form-control" autocomplete="off" placeholder="{{pin.input.placeholder}}" ng-readonly="pin.input.readonly" ng-model="AccountUpdateInfo.pin" ng-change="AccountUpdateInfo.acctInfoOnChange(pin.input.id)" ng-init="AccountUpdateInfo.pin = pin.input.value" ng-required="pin.input.required">
+    <input id="{{pin.input.id + '_UiInput'}}" value="{{pin.input.value}}" type="{{pin.input.type}}" class="form-control" autocomplete="off" placeholder="{{pin.input.placeholder}}" ng-readonly="pin.input.readonly" ng-model="AccountUpdateInfo.pin" ng-change="AccountUpdateInfo.acctInfoOnChange(pin.input.id)" ng-init="AccountUpdateInfo.pin = pin.input.value" ng-required="pin.input.required" ng-blur="AccountUpdateInfo.acctPinChange(pin.input.id)">
   </div>
   <div class="col-sm-2" ng-repeat="pin in AccountUpdateInfo.acctInfoPinCheck">
     <input id="{{pin.input.id + '_UiInput'}}" type="{{pin.input.type}}" ng-checked="pin.input.check" ng-click="AccountUpdateInfo.pinCheck(pin.input.id)" ng-disabled="{{pin.input.disabled}}"> <label for="{{pin.input.id + '_UiInput'}}">{{pin.label.text}}</label>
