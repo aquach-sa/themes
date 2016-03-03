@@ -21,7 +21,7 @@ angular.module('secureauth', [
     theme: themeName,
   };
 })())
-.run(function($rootScope, $location, $state, $timeout) {
+.run(function($rootScope, $location, $state, $timeout, $window) {
   
   $rootScope.$state = $state;
 
@@ -57,9 +57,11 @@ angular.module('secureauth', [
 
   angular.element('#aspnetForm').attr('name', 'mainForm');
 
-  $timeout(function () {
-    angular.element('#preLoader').fadeOut('slow');
-    secureAuth.theme.init();
-  }, 2000);
+  angular.element($window).on('load', function() {
+    angular.element('#preLoader').fadeOut();
+    $timeout(function () {
+      $(document).trigger('saReady');
+    }, 250);
+  });
 
 });
