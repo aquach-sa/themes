@@ -6,7 +6,7 @@
 </div>
 <div class="form-group" ng-if="PinCode.showKeyPad">
   <div class="btn--keypad">
-    <div class="col-xs-12">
+    <div>
       <span class="btn btn-primary btn--key" ng-repeat="key in PinCode.keyPad" ng-click="PinCode.keyPress(key)">{{key}}</span>
       <span class="btn btn-primary btn--key pull-right" ng-click="PinCode.keyPress('clear')">C</span>
       <span class="btn btn-primary btn--key pull-right" ng-click="PinCode.keyPress(0)">0</span>
