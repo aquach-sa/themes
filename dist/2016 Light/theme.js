@@ -1,8 +1,8 @@
+'use strict';
+
 var secureAuth = secureAuth || {};
 
 secureAuth.theme = (function () {
-  'use strict';
-
   var init = function () {
   };
 
@@ -10,3 +10,7 @@ secureAuth.theme = (function () {
     init: init
   };
 }());
+
+$(document).on('saReady', function() {
+  secureAuth.theme.init();
+});
