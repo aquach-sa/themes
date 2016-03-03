@@ -57,11 +57,11 @@ angular.module('secureauth', [
 
   angular.element('#aspnetForm').attr('name', 'mainForm');
 
-  angular.element($window).on('load', function() {
+  angular.element($window).on('DOMContentLoaded', function() {
     angular.element('#preLoader').fadeOut();
     $timeout(function () {
-      $(document).trigger('saReady');
-    }, 250);
+      angular.element(document).trigger('saReady');
+    }, 500);
   });
 
 });
