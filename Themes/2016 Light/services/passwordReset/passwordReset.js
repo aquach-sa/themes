@@ -52,4 +52,24 @@ angular.module('secureauth')
       return domModel.getButtonData(button);
     };
 
+    this.getStatusLabel = function () {
+      var label = angular.element('#ContentPlaceHolder1_AccountStatusLabel');
+      return domModel.getLabelData(label);
+    };
+
+    this.getStatusText = function () {
+      var label = angular.element('#ContentPlaceHolder1_AccountStatusLabel2');
+      return domModel.getLabelData(label);
+    };
+
+    this.getPassUnlock = function () {
+      var button = angular.element('#ContentPlaceHolder1_ButtonUnlock');
+      return domModel.getButtonData(button);
+    };
+
+    this.getStatusError = function () {
+      var label = angular.element('#ContentPlaceHolder1_LabelUnlockErr');
+      return domModel.getLabelData(label);
+    };
+
   });
