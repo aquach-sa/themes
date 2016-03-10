@@ -108,5 +108,5 @@ angular.module('secureauth')
       var input = angular.element('#ContentPlaceHolder1_registerButton');
       return domModel.getInputData(input);
     };
-
+    
   });
