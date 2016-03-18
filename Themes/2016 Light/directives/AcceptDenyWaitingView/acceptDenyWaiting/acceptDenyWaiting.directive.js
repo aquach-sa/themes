@@ -10,6 +10,7 @@ angular.module('secureauth')
         spinner: true,
         headerTxt: acceptDeny.getHeaderTxt()[0],
         altLink: acceptDeny.getAltLink()[0],
+        symbol: acceptDeny.getSymbol()[0],
         showSpinner: function () {
           var spin = angular.element('.accept-deny.spinner');
 
