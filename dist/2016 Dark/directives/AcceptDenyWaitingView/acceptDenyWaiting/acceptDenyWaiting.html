@@ -1,8 +1,8 @@
 <div class="col-sm-12">
   <div class="row">
-    <p class="text-center">{{AcceptDenyWaiting.headerTxt.label.text}}</p>
+    <p class="accept__title text-center">{{AcceptDenyWaiting.headerTxt.label.text}}</p>
 
-    <div class="accept-spinner" ng-show="AcceptDenyWaiting.spinner" ng-init="AcceptDenyWaiting.showSpinner()">
+    <div class="accept__spinner" ng-show="AcceptDenyWaiting.spinner" ng-init="AcceptDenyWaiting.showSpinner()">
       <div class="loader1 loader"></div>
       <div class="loader2 loader"></div>
       <div class="loader3 loader"></div>
@@ -18,8 +18,8 @@
     </div>
 
     <div class="col-xs-12" ng-if="AcceptDenyWaiting.symbol.label.text.length > 0">
-      <div class="accept-symbol">{{AcceptDenyWaiting.symbol.label.text}}</div>
-      <div class="accept-loader"></div>
+      <div class="accept__symbol">{{AcceptDenyWaiting.symbol.label.text}}</div>
+      <div class="accept__loader"></div>
     </div>
 
   </div>
