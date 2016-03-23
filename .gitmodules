@@ -1,5 +1,0 @@
-[submodule "TFS"]
-	path = TFS
-	url = git@sagithub-ent.secureauth.com:kphan/tfs-themes.git
-	ignore = untracked
-	fetchrecursesubmodules = true
