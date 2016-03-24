@@ -319,4 +319,9 @@ angular.module('secureauth')
       return domModel.getButtonData(button);
     };
 
+    this.getPinValidationMsg = function () {
+      var label = angular.element('#ContentPlaceHolder1_revPIN');
+      return domModel.getLabelData(label);
+    };
+
   });

@@ -7,14 +7,13 @@ angular.module('secureauth')
       var vm = this;
 
       angular.extend(vm, {
-        newPin: manageAccount.getNewPin(),
-        confirmPin: manageAccount.getConfirmPin(),
+        newPin: manageAccount.getNewPin()[0],
+        confirmPin: manageAccount.getConfirmPin()[0],
         acctPassMsg: manageAccount.getAcctPassMsg()[0],
         acctPinCloseBtn: manageAccount.getAcctPinCloseBtn()[0],
         acctPinResetBtn: manageAccount.getAcctPinResetBtn()[0],
         pinErrorText: manageAccount.getPinErrorText()[0],
-        pin: '',
-        confirm: '',
+        pinValidationMsg: manageAccount.getPinValidationMsg()[0],
         onChange: function (id) {
           var passVal = angular.element('#' + id + '_UiInput').val();
           angular.element('#' + id).val(passVal);

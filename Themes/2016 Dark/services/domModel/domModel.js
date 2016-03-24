@@ -27,7 +27,9 @@ angular.module('secureauth')
             required: (obj.getAttribute('required') !== null) ? true : false,
             value: (obj.getAttribute('value') === null || obj.getAttribute('value') === undefined) ? '' : obj.getAttribute('value'),
             type: obj.type,
-            placeholder: (obj.getAttribute('placeholder') !== null) ? obj.getAttribute('placeholder') : ''
+            placeholder: (obj.getAttribute('placeholder') !== null) ? obj.getAttribute('placeholder') : '',
+            maxlength: (obj.getAttribute('maxlength') === null || obj.getAttribute('maxlength') === undefined) ? '' : obj.getAttribute('maxlength'),
+            minlength: (obj.getAttribute('minlength') === null || obj.getAttribute('minlength') === undefined) ? '' : obj.getAttribute('minlength')
         };
       }).get();
       return data;
@@ -63,7 +65,9 @@ angular.module('secureauth')
             required: (obj.getAttribute('required') !== null) ? true : false,
             value: (obj.getAttribute('value') === null || obj.getAttribute('value') === undefined) ? '' : obj.getAttribute('value'),
             type: obj.type,
-            placeholder: (obj.getAttribute('placeholder') !== null) ? obj.getAttribute('placeholder') : ''
+            placeholder: (obj.getAttribute('placeholder') !== null) ? obj.getAttribute('placeholder') : '',
+            maxlength: (obj.getAttribute('maxlength') === null || obj.getAttribute('maxlength') === undefined) ? '' : obj.getAttribute('maxlength'),
+            minlength: (obj.getAttribute('minlength') === null || obj.getAttribute('minlength') === undefined) ? '' : obj.getAttribute('minlength')
           }
         };
       }).get();

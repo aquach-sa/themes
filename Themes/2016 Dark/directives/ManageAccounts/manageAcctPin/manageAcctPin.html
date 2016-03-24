@@ -8,20 +8,25 @@
       <div class="modal-body">
         <div class="form-horizontal">
 
-          <div class="form-group" ng-repeat="pass in ManageAcctPin.newPin">
-            <label class="col-sm-4">{{pass.label.text}}</label>
+          <div class="alert alert-warning text-center" ng-show="(ManageAcctPin.pin !== ManageAcctPin.confirm) && (ManageAcctPin.pin.length > 0 && ManageAcctPin.confirm.length > 0)">
+            {{ManageAcctPin.pinErrorText.label.text}}
+          </div>
+
+          <div class="alert alert-danger text-center" ng-show="mainForm.newpin.$error.minlength">
+            {{ManageAcctPin.pinValidationMsg.label.text}}
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4">{{ManageAcctPin.newPin.label.text}}</label>
             <div class="col-sm-8">
-              <input id="{{pass.input.id + '_UiInput'}}" type="{{pass.input.type}}" class="form-control" ng-model="ManageAcctPin.pin" ng-change="ManageAcctPin.onChange(pass.input.id)">
+              <input id="{{ManageAcctPin.newPin.input.id + '_UiInput'}}" type="{{ManageAcctPin.newPin.input.type}}" class="form-control" name="newpin" ng-minlength="{{ManageAcctPin.newPin.input.minlength}}" maxlength="{{ManageAcctPin.newPin.input.maxlength}}" ng-model="ManageAcctPin.pin" ng-change="ManageAcctPin.onChange(ManageAcctPin.newPin.input.id)">
             </div>
           </div>
 
-          <div class="form-group" ng-repeat="pass in ManageAcctPin.confirmPin">
-            <label class="col-sm-4">{{pass.label.text}}</label>
+          <div class="form-group">
+            <label class="col-sm-4">{{ManageAcctPin.confirmPin.label.text}}</label>
             <div class="col-sm-8">
-              <input id="{{pass.input.id + '_UiInput'}}" type="{{pass.input.type}}" class="form-control" ng-model="ManageAcctPin.confirm" ng-change="ManageAcctPin.onChange(pass.input.id)">
-            </div>
-            <div class="col-sm-12" ng-show="(ManageAcctPin.pin !== ManageAcctPin.confirm) && (ManageAcctPin.pin.length > 0 && ManageAcctPin.confirm.length > 0)">
-              <span class="help-block">{{ManageAcctPin.pinErrorText.label.text}}</span>
+              <input id="{{ManageAcctPin.confirmPin.input.id + '_UiInput'}}" type="{{ManageAcctPin.confirmPin.input.type}}" class="form-control" minlength="{{ManageAcctPin.confirmPin.input.minlength}}" maxlength="{{ManageAcctPin.confirmPin.input.maxlength}}" ng-model="ManageAcctPin.confirm" ng-change="ManageAcctPin.onChange(ManageAcctPin.confirmPin.input.id)">
             </div>
           </div>
 
