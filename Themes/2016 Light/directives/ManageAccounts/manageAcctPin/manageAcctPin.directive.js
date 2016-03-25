@@ -14,6 +14,7 @@ angular.module('secureauth')
         acctPinResetBtn: manageAccount.getAcctPinResetBtn()[0],
         pinErrorText: manageAccount.getPinErrorText()[0],
         pinValidationMsg: manageAccount.getPinValidationMsg()[0],
+        focus: false,
         onChange: function (id) {
           var passVal = angular.element('#' + id + '_UiInput').val();
           angular.element('#' + id).val(passVal);
@@ -32,6 +33,7 @@ angular.module('secureauth')
           if (modalVisible !== 'none' && modal.length > 0) {
             modal.parent().addClass('ng-cloak');
             angular.element('#resetPin').modal();
+            vm.focus = true;
           }
         },
         init: function () {

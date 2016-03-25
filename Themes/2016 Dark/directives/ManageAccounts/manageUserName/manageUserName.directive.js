@@ -9,17 +9,16 @@ angular.module('secureauth')
       angular.extend(vm, {
         username: '',
         userName: manageAccount.getUserName(),
+        userNameBtn: manageAccount.getUserNameBtn()[0],
+        noUsername: manageAccount.getNoUsername()[0],
         onUsernameChnage: function (id) {
           var uname = angular.element('#' + id);
           uname.val(vm.username);
         },
         getUsername: function () {
           vm.username = vm.userName[0].input.value;
-        },
-        userNameBtn: manageAccount.getUserNameBtn()[0],
-        noUsername: manageAccount.getNoUsername()[0]
+        }
       });
-
     };
 
     return {

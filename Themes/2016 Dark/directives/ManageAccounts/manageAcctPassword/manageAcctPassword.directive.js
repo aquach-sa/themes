@@ -14,6 +14,7 @@ angular.module('secureauth')
         acctPassResetBtn: manageAccount.getAcctPassResetBtn()[0],
         errorText: manageAccount.getErrorText()[0],
         required: true,
+        focus: false,
         password: '',
         confirm: '',
         onChange: function (id) {
@@ -35,6 +36,7 @@ angular.module('secureauth')
           if (modalVisible !== 'none' && modal.length > 0) {
             modal.parent().addClass('ng-cloak');
             angular.element('#resetPassword').modal();
+            vm.focus = true;
           }
         },
         onKey: function ($event) {
