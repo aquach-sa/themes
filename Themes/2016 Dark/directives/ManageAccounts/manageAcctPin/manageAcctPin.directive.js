@@ -25,6 +25,7 @@ angular.module('secureauth')
         },
         closeModal: function () {
           var button = angular.element('#ContentPlaceHolder1_CancelResetPINModalButton');
+          vm.focus = false;
           button.trigger('click');
         },
         showModal: function () {
