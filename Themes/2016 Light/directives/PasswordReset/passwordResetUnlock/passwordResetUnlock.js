@@ -8,8 +8,8 @@ angular.module('secureauth')
 
       angular.extend(vm, {
         passUnlock: passwordReset.getPassUnlock()[0],
-        unlockUser: function (id) {
-          var button = angular.element('#' + id);
+        unlockUser: function () {
+          var button = angular.element('#ContentPlaceHolder1_ButtonUnlock');
           button.trigger('click');
         }
       });
