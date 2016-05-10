@@ -1,6 +1,6 @@
 {
   "name": "secureauth",
-  "version": "8.2.0",
+  "version": "9.0.0",
   "author": "SecureAuth <developers@secureauth.com>",
   "description": "SecureAuth themes builder and templates",
   "private": true,
