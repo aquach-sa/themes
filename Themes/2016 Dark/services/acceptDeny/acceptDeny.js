@@ -12,6 +12,11 @@ angular.module('secureauth')
       var link = angular.element('#lnkbtnAlternative');
       return domModel.getLinkData(link);
     };
+
+    this.getSymbol = function() {
+      var label = angular.element('#ContentPlaceHolder1_MFALoginControl1_AcceptDenyWaitingView_lblSymbol');
+      return domModel.getLabelData(label);
+    };
     
 });
 

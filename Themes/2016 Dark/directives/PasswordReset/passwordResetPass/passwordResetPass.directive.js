@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('secureauth')
-  .directive('passwordResetPass', function (config, passwordReset) {
+  .directive('passwordResetPass', function (config, passwordReset, $timeout) {
 
     var passwordResetPassController = function () {
       var vm = this;
@@ -22,14 +22,12 @@ angular.module('secureauth')
         passOnChange: function (id) {
           var infoVal = angular.element('#' + id + '_UiInput').val();
           angular.element('#' + id).val(infoVal);
-          vm.passStrength();
         },
         resetPass: function (id) {
           var button = angular.element('#' + id);
           button.trigger('click');
         },
         passStrength: function () {
-          var passStrength = angular.element('#ContentPlaceHolder1_TextBoxPassword1_UiInput_PasswordStrength');
           if (vm.count === 0) {
             WebForm_AutoFocus('ContentPlaceHolder1_TextBoxPassword1_UiInput');
             Sys.Application.add_init(function() {
@@ -52,7 +50,9 @@ angular.module('secureauth')
             });
           }
           vm.count = 1;
-          vm.passStrengthTxt = passStrength.text();
+          $timeout(function () {
+            vm.passStrengthTxt = angular.element('#ContentPlaceHolder1_TextBoxPassword1_UiInput_PasswordStrength').text();
+          }, 0);
         }
       });
     };

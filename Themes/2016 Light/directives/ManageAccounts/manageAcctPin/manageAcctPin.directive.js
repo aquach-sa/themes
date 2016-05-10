@@ -7,14 +7,14 @@ angular.module('secureauth')
       var vm = this;
 
       angular.extend(vm, {
-        newPin: manageAccount.getNewPin(),
-        confirmPin: manageAccount.getConfirmPin(),
+        newPin: manageAccount.getNewPin()[0],
+        confirmPin: manageAccount.getConfirmPin()[0],
         acctPassMsg: manageAccount.getAcctPassMsg()[0],
         acctPinCloseBtn: manageAccount.getAcctPinCloseBtn()[0],
         acctPinResetBtn: manageAccount.getAcctPinResetBtn()[0],
         pinErrorText: manageAccount.getPinErrorText()[0],
-        pin: '',
-        confirm: '',
+        pinValidationMsg: manageAccount.getPinValidationMsg()[0],
+        focus: false,
         onChange: function (id) {
           var passVal = angular.element('#' + id + '_UiInput').val();
           angular.element('#' + id).val(passVal);
@@ -25,6 +25,7 @@ angular.module('secureauth')
         },
         closeModal: function () {
           var button = angular.element('#ContentPlaceHolder1_CancelResetPINModalButton');
+          vm.focus = false;
           button.trigger('click');
         },
         showModal: function () {
@@ -33,6 +34,7 @@ angular.module('secureauth')
           if (modalVisible !== 'none' && modal.length > 0) {
             modal.parent().addClass('ng-cloak');
             angular.element('#resetPin').modal();
+            vm.focus = true;
           }
         },
         init: function () {

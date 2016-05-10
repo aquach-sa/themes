@@ -1,5 +1,5 @@
 <div class="input-group">
-  <input id="{{info.input.id + '_UiInput'}}" type="{{info.input.type}}" class="form-control" autocomplete="off"  ng-model="ManageUserName.username" ng-change="ManageUserName.onUsernameChnage(info.input.id)" ng-init="ManageUserName.getUsername()" placeholder="{{ManageAcctHeader.headerTxt.label.text}}" ng-repeat="info in ManageUserName.userName" required>
+  <input id="{{info.input.id + '_UiInput'}}" type="{{info.input.type}}" class="form-control" autocomplete="off"  ng-model="ManageUserName.username" ng-change="ManageUserName.onUsernameChnage(info.input.id)" ng-init="ManageUserName.getUsername()" placeholder="{{ManageAcctHeader.headerTxt.label.text}}" ng-repeat="info in ManageUserName.userName" focus-if="{{!ManageAcctPassword.focus || !ManageAcctPin.focus}}" required>
   <span class="input-group-btn">
     <button id="{{ManageUserName.userNameBtn.button.id + '_UiButton'}}" class="btn btn-info btn--manage btn--user" name="{{ManageUserName.userNameBtn.button.name}}">{{ManageUserName.userNameBtn.button.value}}</button>
   </span>

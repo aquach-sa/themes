@@ -12,6 +12,7 @@ angular.module('secureauth')
         click: function (id) {
           var valid = angular.element('#aspnetForm').hasClass('ng-valid');
           if (valid && vm.submited === 'false') {
+            angular.element('#preLoader').fadeIn();
             angular.element('#' + id).trigger('click');
             vm.submited = 'true';
           }
