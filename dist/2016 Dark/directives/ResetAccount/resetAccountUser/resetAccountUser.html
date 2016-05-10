@@ -1,7 +1,7 @@
 <div class="form-group" ng-repeat="info in ResetAccountUser.userName">
   <label class="col-sm-3">{{info.label.text}}</label>
   <div class="col-sm-9">
-    <input id="{{info.input.id + '_UiInput'}}" value="{{info.input.value}}" type="{{info.input.type}}" class="form-control" autocomplete="off" ng-disabled="info.input.disabled">
+    <input id="{{info.input.id + '_UiInput'}}" value="{{info.input.value}}" type="{{info.input.type}}" class="form-control" autocomplete="off" ng-disabled="{{info.input.disabled}}">
   </div>
   <small class="col-sm-3"><i>{{ResetAccountUser.userStatus.label.text}}</i></small>
 </div>
