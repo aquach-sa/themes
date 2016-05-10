@@ -1,4 +1,4 @@
-## SecureAuth Themes
+## SecureAuth Themes v9.0.0
 
 Themes are built with [AngularJS](https://angularjs.org/), [SASS](http://sass-lang.com/), [BEM](https://en.bem.info/), [Bootstrap 3](http://getbootstrap.com/), and [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5). Please get familiar with each of these front end framwork or syntax before you make any major modification to the files. 
 
@@ -8,7 +8,7 @@ If you're comfortable getting up and running from a git clone, this method is fo
 
 If you clone the GitHub repository, you will need to build a number of assets using Gulp.
 
-The master branch contains the latest release.
+The master branch contains the latest release. If you need the older version please select the correct tag.
 
 ### Install NodeJS(v5.0.0 minimum)
 
