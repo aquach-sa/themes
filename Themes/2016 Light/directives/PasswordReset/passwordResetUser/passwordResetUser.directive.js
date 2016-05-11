@@ -7,7 +7,11 @@ angular.module('secureauth')
       var vm = this;
 
       angular.extend(vm, {
-        userName: passwordReset.getUserName()
+        userName: passwordReset.getUserName()[0],
+        userIdOnChange: function (id) {
+          var infoVal = angular.element('#' + id + '_UiInput').val();
+          angular.element('#' + id).val(infoVal);
+        }
       });
 
     };
